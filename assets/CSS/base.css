@@ -35,7 +35,6 @@ body {
     font-family: var(--font-title);
     z-index: 10;
     transition: all .5s;
-    /* transition: background-color .2s ease; */
 }
 
 .header.sticky {
@@ -82,13 +81,14 @@ body {
 .nav__item {
     margin-left: 2.5rem;
     transition: all .2s ease;
-}
-
-.nav__item:hover {
     opacity: 0.8;
 }
 
-.header.sticky .nav__item:hover {
+.nav__item:hover {
+    opacity: 1;
+}
+
+.header.sticky .nav__item {
     opacity: 1;
 }
 
@@ -112,5 +112,3 @@ body {
 .header.sticky .nav__item:hover .nav__btn {
     color: var(--color-primary);
 }
-
-.nav__icon {}
