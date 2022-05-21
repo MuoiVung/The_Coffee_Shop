@@ -1,3 +1,7 @@
+/*
+    Đây là file css dùng chung cho các trang.
+*/
+
 * {
     padding: 0;
     margin: 0;
@@ -29,11 +33,27 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: var(--font-title);
-    color: #fff;
+    z-index: 10;
+    transition: all .5s;
+    /* transition: background-color .2s ease; */
+}
+
+.header.sticky {
+    padding: 0.5rem 2rem;
+    background-color: #FDFDFD;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.09);
 }
 
 .brand {
     flex: 1;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header.sticky .brand {
+    color: var(--color-title);
 }
 
 .nav {
@@ -51,7 +71,12 @@ body {
 
 .nav__list:first-child {
     padding-right: 2.5rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.8);
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.header.sticky .nav__list:first-child {
+    border-color: var(--color-text);
+    opacity: 0.8;
 }
 
 .nav__item {
@@ -63,11 +88,29 @@ body {
     opacity: 0.8;
 }
 
+.header.sticky .nav__item:hover {
+    opacity: 1;
+}
+
 .nav__link,
 .nav__btn {
     text-decoration: none;
     color: #fff;
     font-size: 1.125rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+    transition: all .2s ease;
+}
+
+.header.sticky .nav__link,
+.header.sticky .nav__btn {
+    text-shadow: none;
+    color: var(--color-title);
+}
+
+.header.sticky .nav__item:hover .nav__link,
+.header.sticky .nav__item:hover .nav__btn {
+    color: var(--color-primary);
 }
 
 .nav__icon {}
