@@ -5,17 +5,17 @@
 }
 
 :root {
-    --primary-color: #c7a17a;
-    --title-color: #30271c;
-    --text-color: #666666;
-    --title-font: 'Oswald', sans-serif;
-    --italic-font: 'Merriweather', serif;
-    --text-font: 'Open Sans', sans-serif;
+    --color-primary: #c7a17a;
+    --color-title: #30271c;
+    --color-text: #666666;
+    --font-title: 'Oswald', sans-serif;
+    --font-italic: 'Merriweather', serif;
+    --font-text: 'Open Sans', sans-serif;
 }
 
 body {
-    font-family: var(--text-font);
-    color: var(--text-color);
+    font-family: var(--font-text);
+    color: var(--color-text);
 }
 
 
@@ -28,7 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--title-font);
+    font-family: var(--font-title);
     color: #fff;
 }
 
