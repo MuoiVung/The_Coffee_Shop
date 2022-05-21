@@ -1,0 +1,26 @@
+/* Intro---------- */
+.hero__intro{
+    /* background-color: var(--color-primary); */
+    background-image: url("blog-image-1.jpg");
+    height: 495px;
+    position: relative;
+}
+
+.hero__intro .hero__intro--top{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    border-bottom: 2px solid black;
+}
+
+.hero__intro .hero__intro--top img{
+   width: 300px;
+}
+
+.hero__intro .hero__intro--bottom{
+    position: absolute;
+    left: 38%;
+    top: 80%;
+    font-size: 40px;
+    color: var(--color-title);
+}
