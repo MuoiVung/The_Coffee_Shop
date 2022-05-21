@@ -1,6 +1,4 @@
 /**
- *
-/**
  * Đây là file js dùng chung cho các trang.
  */
 /////////////////////////

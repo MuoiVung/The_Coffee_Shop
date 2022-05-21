@@ -1,19 +1,23 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+.hero {}
 
-:root {
-    --color-primary: #c7a17a;
-    --color-title: #30271c;
-    --color-text: #666666;
-    --font-title: 'Oswald', sans-serif;
-    --font-italic: 'Merriweather', serif;
-    --font-text: 'Open Sans', sans-serif;
-}
+.hero__slider {}
 
-body {
-    font-family: var(--font-text);
-    color: var(--color-text);
-}
+.hero__slide {}
+
+.hero__slide--1 {}
+
+.hero__slide-img {}
+
+.hero__logo {}
+
+.hero__title {}
+
+.hero__desc {}
+
+.hero__btn {}
+
+.slider__btn {}
+
+.slider__btn--right {}
+
+.slider__btn--left {}
