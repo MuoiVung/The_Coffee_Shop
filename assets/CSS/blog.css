@@ -57,11 +57,12 @@
     margin-left: 40%;
     background-color: #c7a17a;
     border: #c7a17a;
-}
-/* .blog__content--left button a{
+} 
+
+.blog__content--left button a{
     text-decoration: none;
     color: white;
-} */
+} 
 /* phải */
 .blog__content--right{
     flex: 1;
@@ -135,7 +136,7 @@
 
 
 /* sản phẩm */
-
+/* 
 .shop__container {
     width: 70%;
     margin: 0 auto;
@@ -193,7 +194,7 @@
 
 .shop__btn {
     /* display: none; */
-    position: absolute;
+    /* position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -229,7 +230,7 @@
 
 /* ---------------------------------------*/
 /* animation */
-@keyframes fadeUp {
+/* @keyframes fadeUp {
     from {
         transform: translateY(100%);
         opacity: 0;
@@ -259,4 +260,4 @@
     to {
         opacity: 0;
     }
-}
+}  */
