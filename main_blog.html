@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- external assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- themify icon -->
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css for page -->
+    <link rel="stylesheet" href="./assets/CSS/base.css">
+    <link rel="stylesheet" href="./assets/CSS/blog_main.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <!-- brand -->
+        <h2 class="brand">Congo</h2>
+
+        <!-- nav -->
+        <nav class="nav">
+            <!-- nav menu -->
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="./index.html">Trang Chủ</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="./about.html">Giới Thiệu</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="./shop.html">Cửa Hàng</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="./main_blog.html">Blog</a>
+                </li>
+            </ul>
+
+            <!-- nav side button -->
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="" class="nav__btn">
+                        <i class="nav__icon ti-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__btn">
+                        <i class="nav__icon ti-search"></i>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__btn nav__btn--user">
+                        <i class="nav__icon ti-menu fa-regular fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <span class="modal__close">
+                    <i class="ti-close"></i>
+                </span>
+                <div class="modal__main">
+                    <h3 class="modal__header">Đăng nhập</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <button class="modal__btn modal__btn--login">Đăng nhập</button>
+                        <a class="modal__lost-pass" href="">Quên mật khẩu?</a>
+                    </form>
+                    <button class="modal__btn modal__btn--register">Đăng ký</button>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- main -->
+    <main>
+        <div class="title">
+            <div>
+                <p>What Happens Here</p>
+                <br>
+                <h1>BLOG STANDARD RIGHT SIDEBAR</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+
+
+        <!-- content -->
+        <section class="blog__body">
+            <div class="content__blog">
+                <h2><em>Learn All Things Coffee and Start Your Own Shop Today!</em></h2>
+            </div>
+            <ul class="blog__list">
+                <li class="blog__item">
+                    <div class="blog__img">
+                        <img src="./assets/img/home-blog-1.jpg" alt="">
+                    </div>
+                    <h3 class="blog__name">
+                        CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?
+                    </h3>
+                    <p class="blog__desc">
+                        Nguyên liệu pha cà phê espresso vẫn là các hạt cà phê dùng cho các loại cà phê khác
+                        nhưng hạt cà phê thường được rang sẫm màu hơn. Điều này rất cần thiết vì qua cách pha
+                        dưới áp suất, axit tự nhiên của hạt cà phê bị hòa tan nhanh hơn các phương pháp pha chế
+                        thông thường rất nhiều. Cà phê espresso pha từ hạt cà phê thường vì thế sẽ có vị chua
+                        khó chịu.
+                    </p>
+                    <a href="./blog.html" class="blog__btn">
+                        Tìm hiểu thêm
+                        <i class="blog__btn-icon ti-angle-double-right"></i>
+                    </a>
+                </li>
+
+                <li class="blog__item">
+                    <div class="blog__img">
+                        <img src="./assets/img/home-blog-2.jpg" alt="">
+                    </div>
+                    <h3 class="blog__name">
+                        CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH
+                    </h3>
+                    <p class="blog__desc">
+                        Nếu đã đọc đến bài viết này, hẳn bạn là một người yêu thích cà phê. Vậy làm thế nào để
+                        chọn được cà phê ngon có phải là câu hỏi mà bạn đang thắc mắc bấy lâu nay chưa tìm được
+                        lời giải đáp. Vậy hãy xem ngay bài này nhé!
+                    </p>
+                    <a href="./blog__two.html" class="blog__btn">
+                        Tìm hiểu thêm
+                        <i class="blog__btn-icon ti-angle-double-right"></i>
+                    </a>
+                </li>
+
+                <li class="blog__item">
+                    <div class="blog__img">
+                        <img src="./assets/img/home-blog-3.jpg" alt="">
+                    </div>
+                    <h3 class="blog__name">
+                        BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON, ĐẬM ĐÀ HƯƠNG VỊ
+                    </h3>
+                    <p class="blog__desc">
+                        Nhiệt độ nước là một yếu tố quan trọng để có thể tạo nên những tách cà phê thơm ngon.
+                        Bạn đã biết nhiệt độ nước lý tưởng để pha cà phê đúng chuẩn?
+
+                        Vì sao phải lưu ý nhiệt độ nước khi pha cà phê?
+
+                        Nhiều người vẫn thường nghĩ chỉ cần đun nước cho sôi, sau đó đổ vào phin pha chế và chờ
+                        khoảng 5 phút cho cà phê nhiễu xuống là có được ly cà phê để uống. Tuy nhiên, điều này
+                        không hẳn đúng vì bạn sẽ không được thưởng thức cà phê với hương vị tốt nhất. Đặc biệt
+                        là đối với các loại cà phê có đặc trưng pha chế riêng. Việc chú ý đến nhiệt độ nước phù
+                        hợp sẽ giúp bạn cảm nhận và say đắm trong hương vị nồng nàn, trọn vẹn của những loại cà
+                        phê hảo hạng.
+                    </p>
+                    <a href="./blog__three.html" class="blog__btn">
+                        Tìm hiểu thêm
+                        <i class="blog__btn-icon ti-angle-double-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- shop -->
+        <section class="shop">
+            <div class="section__container">
+                <section class="section__header">
+                    <h2 class="section__title">Cửa hàng</h2>
+                    <div class="section__separator">
+                        <img src="./assets/img/home-title-separator.png" alt="">
+                    </div>
+                    <p class="section__desc">Thoải mái lựa chọn những túi cà phê chất lượng nhất</p>
+                </section>
+                <section class="shop__body">
+                    <ul class="shop__list">
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+
+                            <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-mobile"></i>
+                        PHONE : <span class="footer__item-content">+083 823 8088</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-location-pin"></i>
+                        ADDRESS : <span class="footer__item-content">congogialaicompany@gmail.com</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-email"></i>
+                        EMAIL : <span class="footer__item-content">congogialaicompany@gmail.com</span>
+                    </li>
+                </ul>
+
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                    </div>
+                    <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
+                        cho bạn!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer__bottom">
+            <div class="footer__container-bottom">
+                <div class="footer__copyright">
+                    2022 All Rights Reserved
+                </div>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-twitter-alt"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+</body>
+
+<!-- script -->
+<script src="./assets/JS/base.js"></script>
+<script src="./assets/JS/home.js"></script>
+
+</html>

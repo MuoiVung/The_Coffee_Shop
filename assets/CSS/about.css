@@ -91,7 +91,11 @@ a{
     background-color: #fff;
 }
 /*   */
-
+.about__content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 6rem ;
+}
 .content--about{
     margin: auto;
     overflow: hidden;
@@ -126,13 +130,93 @@ a{
     flex: 1;
     margin-left: 15%;
     /* overflow: hidden; */
+
 }
-
-
 .about-img img{
-    width: 100%;
+    width: 70%;
+}
+.line{
+    width: 80px;
+    height:  2px;
+    background-color: black;
 }
 /* .about-img span{
     font-size: 12px;
     margin-left: 48%;
 } */
+
+
+
+/* --test */
+li{
+  list-style-type: none;  
+}
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+.footer-top{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+
+}
+
+.footer-top li{
+    
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ccc;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+
+
+.footer-botom{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 43%; */
+    /* padding-left: 43%; */
+    padding-bottom: 20px;
+    border: none;
+    /* border-bottom: 1px solid; */
+}
+
+.footer-botom li img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* gmail */
+#abour{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#abour input {
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px ;
+    width: 400px;
+    text-align: center;
+    outline: none;
+    margin-bottom: 50px;
+}
+.logo-abour img{
+    width: 60px;
+}
