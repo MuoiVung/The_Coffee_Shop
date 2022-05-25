@@ -24,6 +24,15 @@ body {
     color: var(--color-text);
 }
 
+body.open-modal {
+    height: 100vh;
+    overflow-y: hidden;
+    padding-right: var(--scrollbar-width);
+}
+
+
+/* ---------------------------------------*/
+/* header */
 
 .header {
     position: fixed;
@@ -39,10 +48,18 @@ body {
     transition: all .5s;
 }
 
+body.open-modal .header {
+    padding-right: calc(2rem + var(--scrollbar-width));
+}
+
 .header.sticky {
     padding: 0.5rem 2rem;
     background-color: #FDFDFD;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.09);
+}
+
+body.open-modal .header.sticky {
+    padding: 0.5rem calc(2rem + var(--scrollbar-width)) 0.5rem 2rem;
 }
 
 .brand {
@@ -113,4 +130,245 @@ body {
 .header.sticky .nav__item:hover .nav__link,
 .header.sticky .nav__item:hover .nav__btn {
     color: var(--color-primary);
+}
+
+/* ---------------------------------------*/
+/* modal */
+.modal {
+    display: none;
+    inset: 0;
+    position: fixed;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.modal.modal__active {
+    display: block;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+.modal__content {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 25rem;
+    --width: 25rem;
+    background-color: #fff;
+    z-index: 30;
+}
+
+.modal.modal__active .modal__content {
+    animation: fadeLeftIn 0.3s linear;
+}
+
+.modal.modal__closing .modal__content {
+    animation: fadeRightOut 0.3s linear forwards;
+}
+
+.modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.modal__main {
+    padding: 3rem 2rem;
+}
+
+.modal__header {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-title);
+}
+
+.modal__label {
+    display: block;
+}
+
+.modal__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+}
+
+.modal__btn {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal__btn--login {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.modal__btn--login:hover {
+    color: var(--color-title);
+    background-color: #fff;
+}
+
+.modal__lost-pass {
+    display: block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    font-family: var(--font-italic);
+    transition: color 0.3s;
+}
+
+.modal__lost-pass:hover {
+    color: var(--color-primary);
+}
+
+.modal__btn--register {
+    color: var(--color-title);
+    background-color: #fff;
+}
+
+.modal__btn--register:hover {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+
+
+/* ---------------------------------------*/
+/* footer */
+.footer__top {
+    background: url('../img/footer.jpg') no-repeat center /cover;
+}
+
+.footer__container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.footer__list {
+    margin-bottom: 3rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__item {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.footer__item-icon {
+    margin-right: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.footer__item-content {
+    color: #A7A7A7;
+    margin-left: 0.5rem;
+}
+
+.footer__brand {
+    text-align: center;
+}
+
+.footer__logo img {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    width: 10rem;
+    height: auto;
+}
+
+.footer__slogan {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-italic);
+    font-size: 1rem;
+}
+
+.footer__bottom {
+    background-color: #000;
+}
+
+.footer__container-bottom {
+    padding: 2rem 0;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    flex: 1;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.footer__socials {
+    list-style: none;
+    display: flex;
+}
+
+.footer__social {
+    margin-left: 2rem;
+}
+
+.footer__social-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+    color: var(--color-primary);
+}
+
+/* ---------------------------------------*/
+/* animation */
+@keyframes fadeLeftIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRightOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }

@@ -14,6 +14,13 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <!-- thư viện fontawesome new -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./assets/CSS/base.css">
     <link rel="stylesheet" href="./assets/CSS/shop.css">
 </head>
@@ -55,21 +62,469 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
-                        <i class="nav__icon ti-menu"></i>
+                    <a href="" class="nav__btn nav__btn--user">
+                        <i class="nav__icon ti-menu fa-regular fa-user"></i>
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <span class="modal__close">
+                    <i class="ti-close"></i>
+                </span>
+                <div class="modal__main">
+                    <h3 class="modal__header">Đăng nhập</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <button class="modal__btn modal__btn--login">Đăng nhập</button>
+                        <a class="modal__lost-pass" href="">Quên mật khẩu?</a>
+                    </form>
+                    <button class="modal__btn modal__btn--register">Đăng ký</button>
+                </div>
+            </div>
+        </section>
     </header>
 
     <!-- main -->
     <main>
-        <section class="hero"></section>
+        <section class="hero">
+            <img src="./assets/img/shop-title-area.jpg" alt="">
+        </section>
+        <section class="container">
+            <div class="grid">
+                <div class="grid_row">
+                    <div class="grid_column-9">
+                        <div class="products-filter">
+                            <span class="products-filter__lable">Sắp xếp theo</span>
+                            <buton class="products-filter__btn btn">Phổ biến</buton>
+                            <buton class="products-filter__btn btn btn--primary">Mới nhất</buton>
+                            <buton class="products-filter__btn btn">Bán chạy</buton>
+
+                            <div class="select-input">
+                                <span class="select-input__lable">Giá</span>
+                                <i class="select-input__icon fas fa-chevron-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Từ cao đến thấp</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Từ thấp đến cao</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="products-filter__page">
+                                <span class="products-filter__page-num">
+                                    <span class="products-filter__page-parent">1</span>/6
+                                </span>
+                                <div class="products-filter__page-contro">
+                                    <a href="" class="products-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="products-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="products-filter__page-btn">
+                                        <i class="products-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_row">
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/products-img.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Cà phê bột LavAzza Gran
+                                                Aroma Ground Coffee Blend,rang nhẹ-340g</a>
+
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+
+                                            <!-- Sử dụng thư viện mới cho sao -->
+                                            <i class="fas fa-star"></i>
+                                            <i class=" fa-solid fa-star"></i>
+                                            <i class="products-item-star-gold fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <span class="products-price">280.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/pixlr-bg-result.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Cà phê nhân xanh
+                                                Ethiopia Sidamo Guji Bensa-1kg</a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">390.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/amrotcaphe.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Ấm rót cà phê Kalita
+                                                Tsubame Copper 700ml </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">4.600.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/caphehatdarang.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">CÀ PHÊ BLAGU HẠT ĐÃ
+                                                RANG , ETHIOPIA W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">250.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/bophacaphe.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Bộ pha cà phê kiểu Thổ
+                                                Nhĩ Kì Handcrafted Painted Copper Turkish Coffee Set Pot (2-4 ly) </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">3.250.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/coixaycaphe.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Cối Xay Cà Phê Bằng Tay
+                                                KINGrinder K0 – Beginner Pour-Over </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">1.600.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="grid_column-3">
+                        <div class="sidebar">
+                            <div class="sidebar-title">
+                                <h4>Tìm kiếm</h4>
+                            </div>
+                            <div class="sparator">
+
+                            </div>
+                            <div class="sidebar-search-item">
+                                <input id="search-input" type="text" placeholder="Nhập thông tin">
+                                <button class="search-btn">
+                                    <i class="search-btn-icon fas fa-search"></i>
+                                </button>
+                            </div>
+
+                            <div class="sidebar-title">
+                                <h4>Các sản phẩm đã xem gần đây</h4>
+                            </div>
+                            <div class="sparator">
+
+                            </div>
+                            <div class="sidebar-recently_viewed">
+                                <ul class="products-list-wiget">
+                                    <li class="products-list-item">
+                                        <div class="products-list-img">
+                                            <a class="" href="">
+                                                <img src="./assets/img/pixlr-bg-result.png " alt="" width="100"
+                                                    height="100">
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="">
+                                                <span>Cà phê bột LavAzza</span>
+                                            </a>
+                                            <span class="products-price">280.000VND</span>
+                                        </div>
+                                    </li>
+                                    <li class="products-list-item">
+                                        <div class="products-list-img">
+                                            <a href="">
+                                                <img class="products-list-img"
+                                                    src="./assets/img/products-img-caphebot_Lavazza.jpg" alt=""
+                                                    width="100" height="100">
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="">
+                                                <span class="products-title">Cà phê bột LavAzza</span>
+                                            </a>
+                                            <span class="products-price">280.000VND</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-title">
+                                <h4>Các sản phẩm được đánh giá cao</h4>
+                            </div>
+                            <div class="sparator">
+
+                            </div>
+                            <div class="sidebar-products-rated">
+                                <ul class="products-list-wiget">
+                                    <li class="products-list-item">
+                                        <div class="products-list-img">
+                                            <a href="">
+                                                <img class="products-list-img"
+                                                    src="./assets/img/products-img-caphebot_Lavazza.jpg" alt=""
+                                                    width="100" height="100">
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="">
+                                                <span>Cà phê bột LavAzza</span>
+                                            </a>
+                                            <div class="product-item__rating">
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="products-price">280.000VND</span>
+                                        </div>
+                                    </li>
+                                    <li class="products-list-item">
+                                        <div class="products-list-img">
+                                            <a href="">
+                                                <img class="products-list-img"
+                                                    src="./assets/img/products-img-caphebot_Lavazza.jpg" alt=""
+                                                    width="100" height="100">
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="">
+                                                <span>Cà phê bột LavAzza</span>
+                                            </a>
+                                            <div class="product-item__rating">
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="products-price">280.000VND</span>
+                                        </div>
+                                    </li>
+                                    <li class="products-list-item">
+                                        <div class="products-list-img">
+                                            <a href="">
+                                                <img class="products-list-img"
+                                                    src="./assets/img/products-img-caphebot_Lavazza.jpg" alt=""
+                                                    width="100" height="100">
+                                            </a>
+                                        </div>
+                                        <div class="">
+                                            <a href="">
+                                                <span>Cà phê bột LavAzza</span>
+                                            </a>
+                                            <div class="product-item__rating">
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="products-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="products-price">280.000VND</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="sidebar-title">
+                                    <h4>Danh mục sản phẩm</h4>
+                                </div>
+                                <div class="sparator"></div>
+                                <div class="sidebar-prducts-tags">
+                                    <a href="">Cà phê hạt</a>
+                                    <a href="">Cà phê bột</a>
+                                    <a href="">Dụng cụ pha chế cà phê</a>
+
+                                    <a href="">Máy ngành cà phê</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-mobile"></i>
+                        PHONE : <span class="footer__item-content">+06070804111</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-location-pin"></i>
+                        ADDRESS : <span class="footer__item-content">108 Lương Sơn Bạc</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-email"></i>
+                        EMAIL : <span class="footer__item-content">congo@gmail.com</span>
+                    </li>
+                </ul>
+
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                    </div>
+                    <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
+                        cho bạn!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer__bottom">
+            <div class="footer__container-bottom">
+                <div class="footer__copyright">
+                    2022 All Rights Reserved
+                </div>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-twitter-alt"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </body>
 
 <!-- script -->

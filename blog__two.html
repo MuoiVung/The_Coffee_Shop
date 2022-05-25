@@ -13,13 +13,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./assets/CSS/base.css">
     <link rel="stylesheet" href="./assets/CSS/blog.css">
 </head>
 
 <body>
-    <!-- header -->
     <header class="header">
         <!-- brand -->
         <h2 class="brand">Congo</h2>
@@ -55,20 +61,49 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
-                        <i class="nav__icon ti-menu"></i>
+                    <a href="" class="nav__btn nav__btn--user">
+                        <i class="nav__icon ti-menu fa-regular fa-user"></i>
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <span class="modal__close">
+                    <i class="ti-close"></i>
+                </span>
+                <div class="modal__main">
+                    <h3 class="modal__header">Đăng nhập</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <button class="modal__btn modal__btn--login">Đăng nhập</button>
+                        <a class="modal__lost-pass" href="">Quên mật khẩu?</a>
+                    </form>
+                    <button class="modal__btn modal__btn--register">Đăng ký</button>
+                </div>
+            </div>
+        </section>
     </header>
 
     <!-- main -->
     <main>
         <!-- sline -->
-        
+
         <section class="title">
             <div class="title--content">
+<<<<<<< HEAD
                 <img src="assets/img/blog-image-1.jpg">
                 <h1>ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h1>
                 <p  class="blog__b__test">
@@ -79,6 +114,16 @@
                     cà phê mất đi hàm lượng caffeine nhưng 
                     do có vị đậm đà nên cà phê espresso thường lại được cho là một loại 
                     cà phê đậm.</p>
+=======
+                <img src="assets/img/home-slider-3.jpg">
+                <h1>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h1>
+                <p>Không dễ để phân biệt được đâu là cà phê ngon,
+                    bởi ly cà phê nào cũng na ná như nhau đối với những ai chưa có kinh nghiệm
+                    và vị giác thực sự tốt. Tuy nhiên, bạn đừng lo, bởi cà phê ngon sẽ hội tụ đầy
+                    đủ những yếu tố ngọt, chua, đậm đà, thơm. Điều này có nghĩa cà phê được pha từ bột
+                    cà phê nguyên chất,
+                    không bị pha lẫn các tạp chất khác như các loại bột, hương liệu, phẩm màu,...</p>
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
             </div>
         </section>
         <!-- navigation__blog -->
@@ -98,6 +143,7 @@
                     <span class="blog__date--user">Niếp Bàn</span>
                     <br>
                     <br>
+<<<<<<< HEAD
                     <b>1. Cà phê ngon là cà phê thế nào?</b>
                     <p>Không dễ để phân biệt được đâu là cà phê ngon, 
                         bởi ly cà phê nào cũng na ná như nhau đối với những ai 
@@ -128,14 +174,51 @@
                          chế như: sau khi xay thành bột, sau khi pha chế cà phê
                           và khi uống.</p>
                         <br>
+=======
+                    <p>Nếu đã đọc đến bài viết này, hẳn bạn là một người yêu thích cà phê.
+                        Vậy làm thế nào để chọn được cà phê ngon có phải là câu hỏi mà bạn đang
+                        thắc mắc bấy lâu nay chưa tìm được lời giải đáp. Vậy hãy xem ngay bài này nhé!
+                        <br>
+                        <br>
+                        <b>1. Cà phê ngon là cà phê thế nào?</b>
+                        <br>
+                        <br>
+                        Không dễ để phân biệt được đâu là cà phê ngon, bởi ly cà phê nào cũng na ná như
+                        nhau đối với những ai chưa có kinh nghiệm và vị giác thực sự tốt. Tuy nhiên, bạn
+                        đừng lo, bởi cà phê ngon sẽ hội tụ đầy đủ những yếu tố ngọt, chua, đậm đà, thơm.
+                        Điều này có nghĩa cà phê được pha từ bột cà phê nguyên chất, không bị pha lẫn các
+                        tạp chất khác như các loại bột, hương liệu, phẩm màu,...
+                        Vị ngọt:
+                        Khi cà phê chín có nhiều dưỡng chất, do đó, cà phê càng chín thì càng ngon. Sau ki
+                        thu hoạch sẽ sơ chế cà phê, cà phê có vị ngọt thường nhờ sơ chế theo cách phơi
+                        quả chính rồi tách thịt khi quả khô hoặc tách vỏ quả cà phê chín. Phần nhớt ngọt
+                        bao quanh hạt cà phê được đem phơi khô.
+
+                        Vị đắng:
+                        Cà phê có vị đắng đặc trưng bởi nó được tạo thành từ caffeine có trong thành phần
+                        hạt cà phê.
+
+                        Vị chua:
+                        Cà phê có vị chua chủ yếu ở loại cà phê Arabica, chuyên trồng ở những nơi khí hậu
+                        lạnh.
+
+                        Hương thơm:
+                        Bạn có biết có đến trên 800 loại hương thơm khác nhau từ cà phê tùy vào từng giai
+                        đoạn
+                        thu hoạch và pha chế như: sau khi xay thành bột, sau khi pha chế cà phê và khi
+                        uống.
+                    </p>
+                    <br>
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
                     <img src="assets/img/blog__demo2.jpg">
-                    <span class="title__img--demo">Ảnh minh họa</span> 
+                    <span class="title__img--demo">Ảnh minh họa</span>
                     <br>
                     <br>
                     <b>2 cách chọn cà phê ngon bạn cần biết</b><br>
                     <br>
                     <p>Cách 1: Quan sát bột cà phê trước khi pha chế cà phê: <br>
                         <br>
+<<<<<<< HEAD
                         - Dựa trên khối lượng cà phê:
                         Cà phê rang xay nguyên chất lượng có trọng lượng lớn hơn cà phê 
                         có trộn bột, hóa chất. 
@@ -181,6 +264,22 @@
                           như Napoli cho mình và những người thân yêu bạn nhé!
                         </p>   
                         <!-- <button><a href="shop.html">Sản phẩm</a></button> -->
+=======
+                        <br>
+                        Một trong những cách được nhiều người áp dụng để phân biệt cà phê thật,
+                        giả chính là quan sát cà phê khi pha chế.
+                        Cà phê thật sẽ thấy bột cà phê nở phồng lên. Ngược lại, khi cho nước sôi vào
+                        cà phê pha tạp bạn sẽ thấy bột cà phê bị xẹp xuống, không nở mà mùi thơm vẫn
+                        ngào ngạt. C
+                        ó thể cà phê này được ướp mùi hương với nồng độ cao và pha với các loại bột
+                        khác nhau.
+
+                        Nếu sử dụng cà phê với liều lượng hợp lý và cà phê nguyên chất 100%, b
+                        ạn sẽ nhận được rất nhiều lợi ích tốt cho sức khỏe. Do đó, hãy chọn lựa những loại cà phê nguyên
+                        chất 100% như Napoli cho mình và những người thân yêu bạn nhé!
+                    </p>
+                    <!-- <button><a href="shop.html">Sản phẩm</a></button> -->
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
                 </div>
 
             </div>
@@ -188,14 +287,14 @@
                 <!-- 1 -->
                 <!-- <div class="blog__content--right--one">
                     <div class="blog__about">
-                    <a href="about.html">
-                    <div class="blog__content--right--logo">
-                        <img src="assets/img/logoxoaphong (1).png">
-                    </div>
-                    <h4>Công ty cà phê Việt</h4>
-                    <div class="underline--blog"></div>
-                    <p>Bí quyết tạo nên vị ngon!</p>
-                    </a>
+                        <a href="about.html">
+                            <div class="blog__content--right--logo">
+                                <img src="assets/img/logoxoaphong (1).png">
+                            </div>
+                            <h4>Công ty cà phê Việt</h4>
+                            <div class="underline--blog"></div>
+                            <p>Bí quyết tạo nên vị ngon!</p>
+                        </a>
                     </div>
                 </div> -->
                 <div class="blog__content--right--title-item">
@@ -218,42 +317,185 @@
                 <!-- 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog.html">
+<<<<<<< HEAD
                     <img src="assets/img/home-blog-1.jpg">
                     <h5>CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h5>
                     <i class="ti-user blog__date--user--right"></i>
                     <span class="blog__date--user--right">Niếp Bàn</span>
+=======
+                        <img src="assets/img/blog--demo1.jpg">
+                        <h5>CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
                     </a>
                 </div>
                 <!-- bài viết 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog__two.html">
+<<<<<<< HEAD
                     <img src="assets/img/home-blog-2.jpg">
                     <h5>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h5>
                     <i class="ti-user blog__date--user--right"></i>
                     <span class="blog__date--user--right">Niếp Bàn</span>
+=======
+                        <img src="assets/img/blog__demo2.jpg">
+                        <h5>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
                     </a>
                 </div>
                 <!-- cmt -->
                 <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous" 
-                    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" 
-                    nonce="vKV9zshS"></script>
+                <script async defer crossorigin="anonymous"
+                    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="vKV9zshS"></script>
                 <div class="Blog__cmt">
-                    <div class="fb-comments" 
-                    data-href="http://127.0.0.1:5500/blog.html" 
-                    data-width="" data-numposts="5"></div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:5500/blog.html" data-width=""
+                        data-numposts="5"></div>
                 </div>
             </div>
         </div>
         <!-- sản phẩm -->
+<<<<<<< HEAD
         
+=======
+        <div class="hotsale">
+            <section class="shop">
+                <div class="shop__container">
+                    <section class="shop__header">
+                        <h2 class="shop__title">Hot Sale</h2>
+                        <div class="shop__separator">
+                            <img src="./assets/img/home-title-separator.png" alt="">
+                        </div>
+                        <p class="shop__desc">Thoải mái lựa chọn những túi cà phê chất lượng nhất</p>
+                    </section>
+                    <section class="shop__body">
+                        <ul class="shop__list">
+                            <li class="shop__item">
+                                <a href="" class="shop__item-link">
+                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                    <div class="shop__btn">
+                                        <i class="shop__btn-icon ti-bag"></i>
+                                        <span class="shop__btn-text">Mua Ngay</span>
+                                    </div>
+                                </a>
+
+                                <div class="shop__item-name">Cà phê Espresso</div>
+                                <div class="shop__item-price">300.000 VNĐ</div>
+                            </li>
+
+                            <li class="shop__item">
+                                <a href="" class="shop__item-link">
+                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                    <div class="shop__btn">
+                                        <i class="shop__btn-icon ti-bag"></i>
+                                        <span class="shop__btn-text">Mua Ngay</span>
+                                    </div>
+                                </a>
+
+                                <div class="shop__item-name">Cà phê Espresso</div>
+                                <div class="shop__item-price">300.000 VNĐ</div>
+                            </li>
+
+                            <li class="shop__item">
+                                <a href="" class="shop__item-link">
+                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                    <div class="shop__btn">
+                                        <i class="shop__btn-icon ti-bag"></i>
+                                        <span class="shop__btn-text">Mua Ngay</span>
+                                    </div>
+                                </a>
+
+                                <div class="shop__item-name">Cà phê Espresso</div>
+                                <div class="shop__item-price">300.000 VNĐ</div>
+                            </li>
+
+                            <li class="shop__item">
+                                <a href="" class="shop__item-link">
+                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                    <div class="shop__btn">
+                                        <i class="shop__btn-icon ti-bag"></i>
+                                        <span class="shop__btn-text">Mua Ngay</span>
+                                    </div>
+                                </a>
+
+                                <div class="shop__item-name">Cà phê Espresso</div>
+                                <div class="shop__item-price">300.000 VNĐ</div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+>>>>>>> 7aa6205cbf714868a4b900f6905ce28989387f52
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer">
+        <section class="footer__top">
+            <div class="footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-mobile"></i>
+                        PHONE : <span class="footer__item-content">+06070804111</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-location-pin"></i>
+                        ADDRESS : <span class="footer__item-content">108 Lương Sơn Bạc</span>
+                    </li>
+                    <li class="footer__item">
+                        <i class="footer__item-icon ti-email"></i>
+                        EMAIL : <span class="footer__item-content">congo@gmail.com</span>
+                    </li>
+                </ul>
+
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                    </div>
+                    <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
+                        cho bạn!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer__bottom">
+            <div class="footer__container-bottom">
+                <div class="footer__copyright">
+                    2022 All Rights Reserved
+                </div>
+                <ul class="footer__socials">
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-twitter-alt"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="ti-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </body>
 
 <!-- script -->
 <script src="./assets/JS/base.js"></script>
-<script src="./assets/JS/blog.js"></script> 
+<script src="./assets/JS/blog.js"></script>
+
 </html>
