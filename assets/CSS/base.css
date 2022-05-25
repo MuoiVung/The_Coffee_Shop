@@ -300,6 +300,7 @@ body.open-modal .header.sticky {
     margin-bottom: 1.5rem;
     width: 10rem;
     height: auto;
+    /* filter: invert(71%) sepia(12%) saturate(1046%) hue-rotate(350deg) brightness(94%) contrast(85%); */
 }
 
 .footer__slogan {
