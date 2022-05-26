@@ -135,7 +135,7 @@ body.open-modal .header.sticky {
 /* ---------------------------------------*/
 /* modal */
 .modal {
-    display: none;
+    /* display: none; */
     inset: 0;
     position: fixed;
     z-index: 20;
@@ -182,6 +182,11 @@ body.open-modal .header.sticky {
 
 .modal__main {
     padding: 3rem 2rem;
+    display: none;
+}
+
+.modal__main--active {
+    display: block;
 }
 
 .modal__header {
@@ -216,6 +221,13 @@ body.open-modal .header.sticky {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.modal__btn:hover {
+    color: var(--color-title);
+    background-color: #fff;
 }
 
 .modal__btn--login {
@@ -223,10 +235,6 @@ body.open-modal .header.sticky {
     color: #fff;
 }
 
-.modal__btn--login:hover {
-    color: var(--color-title);
-    background-color: #fff;
-}
 
 .modal__lost-pass {
     display: block;
@@ -242,16 +250,51 @@ body.open-modal .header.sticky {
     color: var(--color-primary);
 }
 
-.modal__btn--register {
+/* .modal__btn.modal__btn--register {
     color: var(--color-title);
     background-color: #fff;
 }
 
-.modal__btn--register:hover {
+.modal__btn.modal__btn--register:hover {
     color: #fff;
     background-color: var(--color-primary);
+} */
+
+/* modal account */
+.modal__account-name {
+    font-size: 2rem;
+    color: var(--color-title);
+    margin-bottom: 1rem;
 }
 
+.modal__account-details a {
+    color: var(--color-title);
+    text-decoration: none;
+}
+
+.modal__account-cart {
+    margin-top: 1rem;
+}
+
+.modal__list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.modal__item {
+    margin-bottom: 1rem;
+
+}
+
+.modal__link {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.modal__item-icon {
+    margin-right: 0.5rem;
+    color: var(--color-primary);
+}
 
 
 /* ---------------------------------------*/

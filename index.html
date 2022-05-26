@@ -78,7 +78,9 @@
                 <span class="modal__close">
                     <i class="ti-close"></i>
                 </span>
-                <div class="modal__main">
+
+                <!-- modal login -->
+                <div class="modal__main modal--login modal__main--active">
                     <h3 class="modal__header">Đăng nhập</h3>
                     <form class="modal__form" action="">
                         <label class="modal__label" for="">
@@ -95,6 +97,65 @@
                         <a class="modal__lost-pass" href="">Quên mật khẩu?</a>
                     </form>
                     <button class="modal__btn modal__btn--register">Đăng ký</button>
+                </div>
+
+                <!-- modal register -->
+                <div class="modal__main modal--register">
+                    <h3 class="modal__header">Đăng ký</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Tên của bạn <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="text" placeholder="Tên của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <label class="modal__label" for="">
+                            Nhập lại mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+                        <button class="modal__btn modal__btn--register">Đăng ký</button>
+                    </form>
+                </div>
+
+                <!-- modal account -->
+                <div class="modal__main modal--account">
+                    <div class="modal__icon">
+                        <img src="./assets/img/login-icon.png" alt="">
+                    </div>
+                    <h3 class="modal__header">Chào mừng</h3>
+                    <p class="modal__account-name">Tống Giang,</p>
+                    <ul class="modal__list">
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-user"></i>
+                                Thông tin tài khoản
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-cart-shopping"></i>
+                                Giỏ hàng
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-gear"></i>
+                                Cài đặt
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="modal__btn modal__btn--logout">Đăng xuất</button>
                 </div>
             </div>
         </section>
