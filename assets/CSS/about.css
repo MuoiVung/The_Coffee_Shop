@@ -67,10 +67,11 @@ a{
     margin-left: 38px;
 } */
 .about__title .about__content P{
-    font-size: 25px;
-    color: #fff;
+    font-size: 33px;
+    color: whitesmoke;
     font-weight: bold;
     margin: 15px 0;
+    font-family: var(--font-italic);
 }
 /* .about__content--button{
      margin-left: 53px;
@@ -147,6 +148,24 @@ a{
 
 
 
+/* quy trinh */
+.ablout_procedure{
+    background-color: var(--color-bg-gray);
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.about_content_procedure{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content_procedure{
+    flex: 1;
+}
+
 /* --test */
 li{
   list-style-type: none;  
@@ -206,6 +225,7 @@ a{
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 #abour input {
     margin-top: 30px;
