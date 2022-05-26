@@ -135,7 +135,7 @@ body.open-modal .header.sticky {
 /* ---------------------------------------*/
 /* modal */
 .modal {
-    /* display: none; */
+    display: none;
     inset: 0;
     position: fixed;
     z-index: 20;
