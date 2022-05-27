@@ -9,7 +9,9 @@
     overflow: hidden;
     text-align: center;
 }
-
+.title div{
+    animation: fadeUp .5s ease-in-out;
+}
 .title p,
 .title h1{
     color: var(--color-bg-gray);
@@ -20,10 +22,15 @@
     width: 523px;
     background-color: white;
 }
-
+.blog__body{
+    /* background-color: var(--color-bg-gray); */
+    padding-bottom: 30px;
+}
 .content__blog{
     text-align: center;
-    margin: 30px 0;
+    /* margin: 30px 0; */
+    padding: 30px 0;
+
 }
 
 .content__blog h2{
@@ -38,17 +45,21 @@
     align-items: center;
     text-align: center;
 }
-.blog__body{
+/* .blog__body{
     width: 70%;
     margin: 0 auto;
-    padding: 6rem 0;
-}
+    padding: 6rem 0; 
+} */
 
 .blog {
     background-color: var(--color-bg-gray);
 }
 
 .blog__list {
+    width: 70%;
+    margin: 0 auto;
+    padding: 6rem 0;
+    /* font */
     list-style: none;
     padding: 0;
     display: grid;
@@ -99,13 +110,37 @@
 .blog__btn:hover .blog__btn-icon {
     display: inline-block;
 }
-
-
+/* QUY TRINH */
+.ablout_procedure{
+    background-color: var(--color-bg-gray); 
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.about_content_procedure{
+    width: 70%;
+    margin: 0 auto;
+    padding: 6rem 0;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content_procedure{
+    flex: 1;
+}
+/* .content_procedure a{
+    color: var(--color-primary);
+} */
 /* shop */
+
+
 .shop{
     width: 70%;
     margin: 0 auto;
-    padding: 6rem ;
+    padding: 6rem; 
+    /* background-color: #fff; */
 }
 .section__header{
     justify-content: center;
