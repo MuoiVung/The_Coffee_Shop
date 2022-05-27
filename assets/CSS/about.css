@@ -53,6 +53,9 @@ a{
     opacity: 0.3;
     z-index: -2;
 }
+.about__content{
+    animation: fadeUp .5s ease-in-out;
+}
 .about__title.about__content{
     text-align: center;
     max-width: 500px;
@@ -265,6 +268,27 @@ a{
     bottom: 33%;
 }
 /* animation */
+@keyframes fadeUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes fadeIn {
     from {

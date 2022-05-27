@@ -9,7 +9,9 @@
     overflow: hidden;
     text-align: center;
 }
-
+.title div{
+    animation: fadeUp .5s ease-in-out;
+}
 .title p,
 .title h1{
     color: var(--color-bg-gray);
