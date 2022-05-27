@@ -66,8 +66,13 @@ a{
     color: #FDFDFD;
     margin-left: 38px;
 } */
+.about__title .about__content h1{
+    font-size: 6.875rem;
+    font-family: var(--font-title);
+    color: #fff;
+}
 .about__title .about__content P{
-    font-size: 33px;
+    font-size: 24px;
     color: whitesmoke;
     font-weight: bold;
     margin: 15px 0;
