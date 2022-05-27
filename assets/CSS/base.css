@@ -181,7 +181,7 @@ body.open-modal .header.sticky {
 }
 
 .modal__main {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 1rem;
     display: none;
 }
 
@@ -236,29 +236,22 @@ body.open-modal .header.sticky {
 }
 
 
-.modal__lost-pass {
+.modal__btn-link {
     display: block;
-    margin-bottom: 2rem;
-    text-decoration: none;
+    margin-bottom: 1rem;
     font-size: 0.9rem;
     color: var(--color-text);
     font-family: var(--font-italic);
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     transition: color 0.3s;
 }
 
-.modal__lost-pass:hover {
+.modal__btn-link:hover {
     color: var(--color-primary);
 }
-
-/* .modal__btn.modal__btn--register {
-    color: var(--color-title);
-    background-color: #fff;
-}
-
-.modal__btn.modal__btn--register:hover {
-    color: #fff;
-    background-color: var(--color-primary);
-} */
 
 /* modal account */
 .modal__account-name {
@@ -296,6 +289,11 @@ body.open-modal .header.sticky {
     color: var(--color-primary);
 }
 
+.modal__error {
+    text-align: center;
+    font-family: var(--font-text);
+    color: red;
+}
 
 /* ---------------------------------------*/
 /* footer */

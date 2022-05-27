@@ -75,7 +75,9 @@
                 <span class="modal__close">
                     <i class="ti-close"></i>
                 </span>
-                <div class="modal__main">
+
+                <!-- modal login -->
+                <div class="modal__main modal--login modal__main--active">
                     <h3 class="modal__header">Đăng nhập</h3>
                     <form class="modal__form" action="">
                         <label class="modal__label" for="">
@@ -89,11 +91,74 @@
                         <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
 
                         <button class="modal__btn modal__btn--login">Đăng nhập</button>
-                        <a class="modal__lost-pass" href="">Quên mật khẩu?</a>
+                        <button class="modal__btn-link modal__lost-pass">Quên mật khẩu?</button>
                     </form>
-                    <button class="modal__btn modal__btn--register">Đăng ký</button>
+                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biến đến Congo? Đăng ký</button>
                 </div>
+
+                <!-- modal register -->
+                <div class="modal__main modal--register">
+                    <h3 class="modal__header">Đăng ký</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Tên của bạn <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="text" placeholder="Tên của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <label class="modal__label" for="">
+                            Nhập lại mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu" required>
+                        <button class="modal__btn modal__btn--register">Đăng ký</button>
+                    </form>
+                    <button class="modal__btn-link modal__btn-link--login">Bạn đã có tài khoản? Đăng nhập</button>
+                </div>
+
+                <!-- modal account -->
+                <div class="modal__main modal--account">
+                    <div class="modal__icon">
+                        <img src="./assets/img/login-icon.png" alt="">
+                    </div>
+                    <h3 class="modal__header">Chào mừng</h3>
+                    <p class="modal__account-name">Tống Giang,</p>
+                    <ul class="modal__list">
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-user"></i>
+                                Thông tin tài khoản
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-cart-shopping"></i>
+                                Giỏ hàng
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-gear"></i>
+                                Cài đặt
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="modal__btn modal__btn--logout">Đăng xuất</button>
+                </div>
+
+                <p class="modal__error"></p>
             </div>
+
         </section>
     </header>
 
@@ -105,13 +170,13 @@
             <div class="title--content">
                 <img src="assets/img/home-slider-3.jpg">
                 <h1>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h1>
-                <p  class="blog__b__test">
-                    Không dễ để phân biệt được đâu là cà phê ngon, 
-                    bởi ly cà phê nào cũng na ná như nhau đối với những ai chưa 
-                    có kinh nghiệm và vị giác thực sự tốt. Tuy nhiên, bạn đừng lo, 
-                    bởi cà phê ngon sẽ hội tụ đầy đủ những yếu tố ngọt, chua, đậm đà, 
-                    thơm. Điều này có nghĩa cà phê được pha từ bột cà phê nguyên chất, 
-                    không bị pha 
+                <p class="blog__b__test">
+                    Không dễ để phân biệt được đâu là cà phê ngon,
+                    bởi ly cà phê nào cũng na ná như nhau đối với những ai chưa
+                    có kinh nghiệm và vị giác thực sự tốt. Tuy nhiên, bạn đừng lo,
+                    bởi cà phê ngon sẽ hội tụ đầy đủ những yếu tố ngọt, chua, đậm đà,
+                    thơm. Điều này có nghĩa cà phê được pha từ bột cà phê nguyên chất,
+                    không bị pha
                     lẫn các tạp chất khác như các loại bột, hương liệu, phẩm màu,... </p>
             </div>
         </section>
@@ -127,35 +192,35 @@
                     <br>
                     <br>
                     <b>1. Cà phê ngon là cà phê thế nào?</b>
-                    <p>Không dễ để phân biệt được đâu là cà phê ngon, 
-                        bởi ly cà phê nào cũng na ná như nhau đối với những ai 
-                        chưa có kinh nghiệm và vị giác thực sự tốt. 
-                        Tuy nhiên, bạn đừng lo, bởi cà phê ngon sẽ hội tụ đầy đủ những 
-                        yếu tố ngọt, chua, đậm đà, thơm. Điều này có nghĩa cà phê được pha 
-                        từ bột cà phê nguyên chất, không bị pha lẫn các tạp chất khác như các 
+                    <p>Không dễ để phân biệt được đâu là cà phê ngon,
+                        bởi ly cà phê nào cũng na ná như nhau đối với những ai
+                        chưa có kinh nghiệm và vị giác thực sự tốt.
+                        Tuy nhiên, bạn đừng lo, bởi cà phê ngon sẽ hội tụ đầy đủ những
+                        yếu tố ngọt, chua, đậm đà, thơm. Điều này có nghĩa cà phê được pha
+                        từ bột cà phê nguyên chất, không bị pha lẫn các tạp chất khác như các
                         loại bột, hương liệu, phẩm màu,...
                         Vị ngọt:
                         Khi cà phê chín có nhiều dưỡng chất, do đó, cà phê càng
-                         chín thì càng ngon. Sau ki thu hoạch sẽ sơ chế cà phê,
-                          cà phê có vị ngọt thường nhờ sơ chế theo cách phơi 
-                          quả chính rồi tách thịt khi quả khô hoặc tách vỏ quả 
-                          cà phê chín. Phần nhớt ngọt bao quanh hạt cà phê được
-                           đem phơi khô.
-                         
+                        chín thì càng ngon. Sau ki thu hoạch sẽ sơ chế cà phê,
+                        cà phê có vị ngọt thường nhờ sơ chế theo cách phơi
+                        quả chính rồi tách thịt khi quả khô hoặc tách vỏ quả
+                        cà phê chín. Phần nhớt ngọt bao quanh hạt cà phê được
+                        đem phơi khô.
+
                         Vị đắng:
-                        Cà phê có vị đắng đặc trưng bởi nó được tạo thành 
-                        từ caffeine có trong thành phần hạt cà phê. 
-                         
+                        Cà phê có vị đắng đặc trưng bởi nó được tạo thành
+                        từ caffeine có trong thành phần hạt cà phê.
+
                         Vị chua:
-                        Cà phê có vị chua chủ yếu ở loại cà phê Arabica, 
+                        Cà phê có vị chua chủ yếu ở loại cà phê Arabica,
                         chuyên trồng ở những nơi khí hậu lạnh.
-                         
+
                         Hương thơm:
-                        Bạn có biết có đến trên 800 loại hương thơm khác 
+                        Bạn có biết có đến trên 800 loại hương thơm khác
                         nhau từ cà phê tùy vào từng giai đoạn thu hoạch và pha
-                         chế như: sau khi xay thành bột, sau khi pha chế cà phê
-                          và khi uống.</p>
-                        <br>
+                        chế như: sau khi xay thành bột, sau khi pha chế cà phê
+                        và khi uống.</p>
+                    <br>
                     <p>Nếu đã đọc đến bài viết này, hẳn bạn là một người yêu thích cà phê.
                         Vậy làm thế nào để chọn được cà phê ngon có phải là câu hỏi mà bạn đang
                         thắc mắc bấy lâu nay chưa tìm được lời giải đáp. Vậy hãy xem ngay bài này nhé!
@@ -200,62 +265,62 @@
                     <p>Cách 1: Quan sát bột cà phê trước khi pha chế cà phê: <br>
                         <br>
                         - Dựa trên khối lượng cà phê:
-                        Cà phê rang xay nguyên chất lượng có trọng lượng lớn hơn cà phê 
-                        có trộn bột, hóa chất. 
-                        Bởi khi rang cà phê đến nhiệt độ nhất định sẽ làm cà phê nở ra và 
+                        Cà phê rang xay nguyên chất lượng có trọng lượng lớn hơn cà phê
+                        có trộn bột, hóa chất.
+                        Bởi khi rang cà phê đến nhiệt độ nhất định sẽ làm cà phê nở ra và
                         thể tích tăng gấp 1,5 - 2 lần còn trọng lượng giảm 20 - 30%.
-                        Do đó, nếu bạn đặt 2 gói cà phê cùng trọng lượng lên 
+                        Do đó, nếu bạn đặt 2 gói cà phê cùng trọng lượng lên
                         tay quan sát sẽ thấy rằng, cà phê nguyên chất có thể tích lớn hơn sẽ
-                         nhẹ hơn gói cà phê bị pha tạp.
-                         
+                        nhẹ hơn gói cà phê bị pha tạp.
+
                         - Dựa trên độ xốp của cà phê
                         Bột cà phê nguyên chất thường sẽ xốp, tơi, nhẹ còn cà phê pha tạp sẽ
-                         không thấy điều này. Cách nhận biết dễ nhất chính là bạn đổ 2 muỗng 
-                         cà phê của 2 loại này vào 2 ly nước và quan sát. Cà phê nguyên chất 
-                         nổi lên trên còn cà phê pha tạp thường nhanh chóng chìm xuống dưới.
-                         
+                        không thấy điều này. Cách nhận biết dễ nhất chính là bạn đổ 2 muỗng
+                        cà phê của 2 loại này vào 2 ly nước và quan sát. Cà phê nguyên chất
+                        nổi lên trên còn cà phê pha tạp thường nhanh chóng chìm xuống dưới.
+
                         - Dựa trên độ ẩm của bột cà phê
-                        Thường cà  phê nguyên chất ngậm nước khá thấp nên luôn tơi xốp, 
-                        không bị vón cục lại. Còn cà phê pha tạp thường bị vón cục, ẩm ướt 
+                        Thường cà phê nguyên chất ngậm nước khá thấp nên luôn tơi xốp,
+                        không bị vón cục lại. Còn cà phê pha tạp thường bị vón cục, ẩm ướt
                         và không tơi xốp.
-                         
+
                         - Dựa trên màu bột
-                        Cà phê nguyên chất khi rang trong thời gian và nhiệt 
-                        độ phù hợp sẽ cho ra màu nâu đậm. Còn cà phê pha tạp khi 
+                        Cà phê nguyên chất khi rang trong thời gian và nhiệt
+                        độ phù hợp sẽ cho ra màu nâu đậm. Còn cà phê pha tạp khi
                         bạn pha chế thường có màu đen đậm
                         <br>
                         <br>
                         -Cách 2: Quan sát khi pha cà phê <br>
                         <br>
-                        Một trong những cách được nhiều người áp 
+                        Một trong những cách được nhiều người áp
                         dụng để phân biệt cà phê thật, giả chính là quan
-                         sát cà phê khi pha chế.
-                        Cà phê thật sẽ thấy bột cà phê nở phồng lên. 
+                        sát cà phê khi pha chế.
+                        Cà phê thật sẽ thấy bột cà phê nở phồng lên.
                         Ngược lại, khi cho nước sôi vào cà phê pha tạp bạn
-                         sẽ thấy bột cà phê bị xẹp xuống, không nở mà mùi 
-                         thơm vẫn ngào ngạt. 
+                        sẽ thấy bột cà phê bị xẹp xuống, không nở mà mùi
+                        thơm vẫn ngào ngạt.
                         Có thể cà phê này được ướp mùi hương với nồng độ cao
-                         và pha với các loại bột khác nhau.
-                        
-                        Nếu sử dụng cà phê với liều lượng hợp lý và cà 
-                        phê nguyên chất 100%, 
-                        bạn sẽ nhận được rất nhiều lợi ích tốt cho sức khỏe.
-                         Do đó, hãy chọn lựa những loại cà phê nguyên chất 100%
-                          như Napoli cho mình và những người thân yêu bạn nhé!
-                        </p>   
-                        <!-- <button><a href="shop.html">Sản phẩm</a></button> -->
-                      <br>
-                        Một trong những cách được nhiều người áp dụng để phân biệt cà phê thật,
-                        giả chính là quan sát cà phê khi pha chế.
-                        Cà phê thật sẽ thấy bột cà phê nở phồng lên. Ngược lại, khi cho nước sôi vào
-                        cà phê pha tạp bạn sẽ thấy bột cà phê bị xẹp xuống, không nở mà mùi thơm vẫn
-                        ngào ngạt. C
-                        ó thể cà phê này được ướp mùi hương với nồng độ cao và pha với các loại bột
-                        khác nhau.
+                        và pha với các loại bột khác nhau.
 
-                        Nếu sử dụng cà phê với liều lượng hợp lý và cà phê nguyên chất 100%, b
-                        ạn sẽ nhận được rất nhiều lợi ích tốt cho sức khỏe. Do đó, hãy chọn lựa những loại cà phê nguyên
-                        chất 100% như Napoli cho mình và những người thân yêu bạn nhé!
+                        Nếu sử dụng cà phê với liều lượng hợp lý và cà
+                        phê nguyên chất 100%,
+                        bạn sẽ nhận được rất nhiều lợi ích tốt cho sức khỏe.
+                        Do đó, hãy chọn lựa những loại cà phê nguyên chất 100%
+                        như Napoli cho mình và những người thân yêu bạn nhé!
+                    </p>
+                    <!-- <button><a href="shop.html">Sản phẩm</a></button> -->
+                    <br>
+                    Một trong những cách được nhiều người áp dụng để phân biệt cà phê thật,
+                    giả chính là quan sát cà phê khi pha chế.
+                    Cà phê thật sẽ thấy bột cà phê nở phồng lên. Ngược lại, khi cho nước sôi vào
+                    cà phê pha tạp bạn sẽ thấy bột cà phê bị xẹp xuống, không nở mà mùi thơm vẫn
+                    ngào ngạt. C
+                    ó thể cà phê này được ướp mùi hương với nồng độ cao và pha với các loại bột
+                    khác nhau.
+
+                    Nếu sử dụng cà phê với liều lượng hợp lý và cà phê nguyên chất 100%, b
+                    ạn sẽ nhận được rất nhiều lợi ích tốt cho sức khỏe. Do đó, hãy chọn lựa những loại cà phê nguyên
+                    chất 100% như Napoli cho mình và những người thân yêu bạn nhé!
                     </p>
                     <!-- <button><a href="shop.html">Sản phẩm</a></button> -->
 
@@ -286,29 +351,29 @@
                 <!-- 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog__three.html">
-                    <img src="assets/img/home-about-3.jpg">
-                    <h5>BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON</h5>
-                    <i class="ti-user blog__date--user--right"></i>
-                    <span class="blog__date--user--right">Niếp Bàn</span>
+                        <img src="assets/img/home-about-3.jpg">
+                        <h5>BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
                     </a>
                 </div>
 
                 <!-- 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog.html">
-                    <img src="assets/img/home-blog-1.jpg">
-                    <h5>CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h5>
-                    <i class="ti-user blog__date--user--right"></i>
-                    <span class="blog__date--user--right">Niếp Bàn</span>
+                        <img src="assets/img/home-blog-1.jpg">
+                        <h5>CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
                     </a>
                 </div>
                 <!-- bài viết 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog__two.html">
-                    <img src="assets/img/home-blog-2.jpg">
-                    <h5>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h5>
-                    <i class="ti-user blog__date--user--right"></i>
-                    <span class="blog__date--user--right">Niếp Bàn</span>
+                        <img src="assets/img/home-blog-2.jpg">
+                        <h5>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
                     </a>
                 </div>
                 <!-- cmt -->
@@ -322,69 +387,70 @@
             </div>
         </div>
         <!-- sản phẩm -->
-    <!-- footer -->
-    <footer class="footer">
-        <section class="footer__top">
-            <div class="footer__container">
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <i class="footer__item-icon ti-mobile"></i>
-                        PHONE : <span class="footer__item-content">+083 823 8088</span>
-                    </li>
-                    <li class="footer__item">
-                        <i class="footer__item-icon ti-location-pin"></i>
-                        ADDRESS : <span class="footer__item-content">26 Yên đỗ,Phường Yên Đỗ,TP.Pleiku,Gia Lai</span>
-                    </li>
-                    <li class="footer__item">
-                        <i class="footer__item-icon ti-email"></i>
-                        EMAIL : <span class="footer__item-content">congogialaicompany@gmail.com</span>
-                    </li>
-                </ul>
+        <!-- footer -->
+        <footer class="footer">
+            <section class="footer__top">
+                <div class="footer__container">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <i class="footer__item-icon ti-mobile"></i>
+                            PHONE : <span class="footer__item-content">+083 823 8088</span>
+                        </li>
+                        <li class="footer__item">
+                            <i class="footer__item-icon ti-location-pin"></i>
+                            ADDRESS : <span class="footer__item-content">26 Yên đỗ,Phường Yên Đỗ,TP.Pleiku,Gia
+                                Lai</span>
+                        </li>
+                        <li class="footer__item">
+                            <i class="footer__item-icon ti-email"></i>
+                            EMAIL : <span class="footer__item-content">congogialaicompany@gmail.com</span>
+                        </li>
+                    </ul>
 
-                <div class="footer__brand">
-                    <div class="footer__logo">
-                        <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                        </div>
+                        <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
+                            cho bạn!
+                        </p>
                     </div>
-                    <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
-                        cho bạn!
-                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="footer__bottom">
-            <div class="footer__container-bottom">
-                <div class="footer__copyright">
-                    2022 All Rights Reserved
+            <section class="footer__bottom">
+                <div class="footer__container-bottom">
+                    <div class="footer__copyright">
+                        2022 All Rights Reserved
+                    </div>
+                    <ul class="footer__socials">
+                        <li class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <i class="ti-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <i class="ti-twitter-alt"></i>
+                            </a>
+                        </li>
+
+                        <li class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <i class="ti-youtube"></i>
+                            </a>
+                        </li>
+
+                        <li class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <i class="ti-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="footer__socials">
-                    <li class="footer__social">
-                        <a href="#" class="footer__social-link">
-                            <i class="ti-facebook"></i>
-                        </a>
-                    </li>
-
-                    <li class="footer__social">
-                        <a href="#" class="footer__social-link">
-                            <i class="ti-twitter-alt"></i>
-                        </a>
-                    </li>
-
-                    <li class="footer__social">
-                        <a href="#" class="footer__social-link">
-                            <i class="ti-youtube"></i>
-                        </a>
-                    </li>
-
-                    <li class="footer__social">
-                        <a href="#" class="footer__social-link">
-                            <i class="ti-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </footer>
+            </section>
+        </footer>
 </body>
 
 <!-- script -->
