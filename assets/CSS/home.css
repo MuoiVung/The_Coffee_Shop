@@ -27,6 +27,25 @@
     font-family: var(--font-italic);
 }
 
+.section__btn {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.section__btn-link {
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    border: 2px solid var(--color-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+
 /* ---------------------------------------*/
 /* hero */
 
