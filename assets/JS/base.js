@@ -22,22 +22,7 @@ const modalRegister = $('.modal--register');
 const modalError = $('.modal__error');
 const modalInputs = $$('.modal__input');
 
-
 let foundAccount;
-
-const account1 = {
-    email: 'tonggiang@gmail.com',
-    password: '123',
-    name: 'Tống Giang',
-    cart: [],
-};
-
-const account2 = {
-    email: 'lamxung@gmail.com',
-    password: '345',
-    name: 'Lâm Xung',
-    cart: [],
-};
 
 let accounts = [];
 //////////////////////////
