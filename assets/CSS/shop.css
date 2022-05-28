@@ -301,8 +301,6 @@ a {
 
 }
 
-.sidebar-recently_viewed {}
-
 .products-list-wiget {
     list-style: none;
 }
@@ -488,7 +486,6 @@ a {
     color: var(--color-primary);
 }
 
-.woocommerce-tabs {}
 
 .tabs {
     display: block;
