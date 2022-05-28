@@ -187,14 +187,10 @@ a {
 }
 
 /* pagination - phân trang */
-<<<<<<< HEAD
 .product__pagination{
     margin: 40px 0 32px 0;
 }
 .pagination{
-=======
-.pagination {
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,7 +215,6 @@ a {
     line-height: 30px;
     border-radius: 2px;
 }
-<<<<<<< HEAD
 .pagination-item__link-none{
     cursor: none;
 }
@@ -230,17 +225,6 @@ a {
 .pagination-item__icon{
     font-size: 1rem;
     color:var(--color-primary);
-=======
-
-.pagination-item-active .pagination-item__link {
-    color: var(--white-color);
-    background-color: var(--primary-color);
-}
-
-.pagination-item__icon {
-    font-size: 1.4rem;
-    color: #939393;
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
 }
 
 /* shop-products*/
@@ -301,26 +285,16 @@ a {
     margin-right: 2px;
     color: #999;
 }
-<<<<<<< HEAD
 .products-item-star-gold{
-=======
-
-.products-item-star-gold {
-    font-weight: 300;
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
     color: var(--color-primary);
     margin: 6px 1px;
 
 }
-<<<<<<< HEAD
 /* .pagination_2*/
 
 #pagination_2{
     display: none;;
 }
-=======
-
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
 /* shop-sidebar*/
 .sidebar {
     width: 100%;
@@ -329,37 +303,18 @@ a {
 .sidebar-title {
     margin-top: 33px;
     margin-bottom: 5px;
-<<<<<<< HEAD
     color: var(--color-title);  
 }
 .products-list-wiget{
     list-style: none;
 }
 .products-list-wiget-img{
-=======
-    color: var(--color-title);
-
-}
-
-.sidebar-recently_viewed {}
-
-.products-list-wiget {
-    list-style: none;
-}
-
-.products-list-img {
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
     background-color:
         #f5f5f5;
     color: #f5f6fa;
     margin-right: 10px;
 }
-<<<<<<< HEAD
 .products-list-wiget-item{
-=======
-
-.products-list-item {
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
     display: flex;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -370,12 +325,7 @@ a {
     background-color: var(--color-primary);
     border: solid 1px var(--color-primary);
 }
-<<<<<<< HEAD
 .sidebar-products-tags{
-=======
-
-.sidebar-prducts-tags {
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
     display: flex;
     flex-direction: column;
     padding-left: 20px;
@@ -422,7 +372,6 @@ a {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 /* shop-products-information*/
 .container-products-infomation{
     padding: 100px;
@@ -630,6 +579,3 @@ a {
 .navigation-icon:hover{
    color: black;
 }
-=======
-.search-btn-icon {}
->>>>>>> 531fb1a6e919c8b74f90ce2f430747c044896381
