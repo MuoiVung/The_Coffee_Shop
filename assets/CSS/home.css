@@ -189,7 +189,7 @@
 .about__btn-icon {
     display: none;
     margin-left: 0.25rem;
-    animation: fadeRight 0.3s;
+    animation: fadeBackFromLeft 0.3s;
 }
 
 .about__btn:hover .about__btn-icon {
@@ -228,7 +228,6 @@
 }
 
 .shop__btn {
-    /* display: none; */
     position: absolute;
     left: 0;
     bottom: 0;
@@ -313,7 +312,7 @@
 .blog__btn-icon {
     display: none;
     margin-left: 0.25rem;
-    animation: fadeRight 0.3s;
+    animation: fadeBackFromLeft 0.3s;
 }
 
 .blog__btn:hover .blog__btn-icon {
@@ -354,7 +353,7 @@
     }
 }
 
-@keyframes fadeRight {
+@keyframes fadeBackFromLeft {
     from {
         opacity: 0;
         transform: translateX(-100%);

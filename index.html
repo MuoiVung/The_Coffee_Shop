@@ -13,7 +13,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- themify icon -->
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css for page -->
     <link rel="stylesheet" href="./assets/CSS/base.css">
     <link rel="stylesheet" href="./assets/CSS/home.css">
 </head>
@@ -38,7 +47,7 @@
                     <a class="nav__link" href="./shop.html">Cửa Hàng</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="./blog.html">Blog</a>
+                    <a class="nav__link" href="./main_blog.html">Blog</a>
                 </li>
             </ul>
 
@@ -55,12 +64,105 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
-                        <i class="nav__icon ti-menu"></i>
+                    <a href="" class="nav__btn nav__btn--user">
+                        <i class="nav__icon ti-menu fa-regular fa-user"></i>
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <span class="modal__close">
+                    <i class="ti-close"></i>
+                </span>
+
+                <!-- modal login -->
+                <div class="modal__main modal--login modal__main--active">
+                    <h3 class="modal__header">Đăng nhập</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <button class="modal__btn modal__btn--login">Đăng nhập</button>
+                        <button class="modal__btn-link modal__lost-pass">Quên mật khẩu?</button>
+                    </form>
+                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biến đến Congo? Đăng ký</button>
+                </div>
+
+                <!-- modal register -->
+                <div class="modal__main modal--register">
+                    <h3 class="modal__header">Đăng ký</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Tên của bạn <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="text" placeholder="Tên của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <label class="modal__label" for="">
+                            Nhập lại mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu" required>
+                        <button class="modal__btn modal__btn--register">Đăng ký</button>
+                    </form>
+                    <button class="modal__btn-link modal__btn-link--login">Bạn đã có tài khoản? Đăng nhập</button>
+                </div>
+
+                <!-- modal account -->
+                <div class="modal__main modal--account">
+                    <div class="modal__icon">
+                        <img src="./assets/img/login-icon.png" alt="">
+                    </div>
+                    <h3 class="modal__header">Chào mừng</h3>
+                    <p class="modal__account-name">Tống Giang,</p>
+                    <ul class="modal__list">
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-user"></i>
+                                Thông tin tài khoản
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-cart-shopping"></i>
+                                Giỏ hàng
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-gear"></i>
+                                Cài đặt
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="modal__btn modal__btn--logout">Đăng xuất</button>
+                </div>
+
+                <p class="modal__error"></p>
+            </div>
+
+        </section>
     </header>
 
     <!-- main -->
@@ -360,7 +462,7 @@
                                 thông thường rất nhiều. Cà phê espresso pha từ hạt cà phê thường vì thế sẽ có vị chua
                                 khó chịu.
                             </p>
-                            <a href="./blog.html" class="blog__btn">
+                            <a href="./main_blog.html" class="blog__btn">
                                 Tìm hiểu thêm
                                 <i class="blog__btn-icon ti-angle-double-right"></i>
                             </a>
@@ -378,7 +480,7 @@
                                 chọn được cà phê ngon có phải là câu hỏi mà bạn đang thắc mắc bấy lâu nay chưa tìm được
                                 lời giải đáp. Vậy hãy xem ngay bài này nhé!
                             </p>
-                            <a href="./blog.html" class="blog__btn">
+                            <a href="./main_blog.html" class="blog__btn">
                                 Tìm hiểu thêm
                                 <i class="blog__btn-icon ti-angle-double-right"></i>
                             </a>
@@ -404,7 +506,7 @@
                                 hợp sẽ giúp bạn cảm nhận và say đắm trong hương vị nồng nàn, trọn vẹn của những loại cà
                                 phê hảo hạng.
                             </p>
-                            <a href="./blog.html" class="blog__btn">
+                            <a href="./main_blog.html" class="blog__btn">
                                 Tìm hiểu thêm
                                 <i class="blog__btn-icon ti-angle-double-right"></i>
                             </a>
@@ -421,21 +523,21 @@
                 <ul class="footer__list">
                     <li class="footer__item">
                         <i class="footer__item-icon ti-mobile"></i>
-                        PHONE : <span class="footer__item-content">+06070804111</span>
+                        PHONE : <span class="footer__item-content">+083 823 8088</span>
                     </li>
                     <li class="footer__item">
                         <i class="footer__item-icon ti-location-pin"></i>
-                        ADDRESS : <span class="footer__item-content">108 Lương Sơn Bạc</span>
+                        ADDRESS : <span class="footer__item-content">26 Yên đỗ,Phường Yên Đỗ,TP.Pleiku,Gia Lai</span>
                     </li>
                     <li class="footer__item">
                         <i class="footer__item-icon ti-email"></i>
-                        EMAIL : <span class="footer__item-content">congo@gmail.com</span>
+                        EMAIL : <span class="footer__item-content">congogialaicompany@gmail.com</span>
                     </li>
                 </ul>
 
                 <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="./assets/img/logoxoaphong (1).png" alt="" class="footer__logo-img">
+                        <img src="./assets/img/home-logo-white.png" alt="" class="footer__logo-img">
                     </div>
                     <p class="footer__slogan">Chúng tôi luôn nỗ lực mang đến những trải nghiệm tuyệt vời nhất
                         cho bạn!

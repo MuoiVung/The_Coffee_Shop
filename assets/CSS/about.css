@@ -7,15 +7,18 @@ a{
 }
 
 /*  */
+/* .about__content--item{
 
+} */
 .about__title{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    height: 475px;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .about__title::before{
@@ -50,23 +53,39 @@ a{
     opacity: 0.3;
     z-index: -2;
 }
+.about__content{
+    animation: fadeUp .5s ease-in-out;
+}
 .about__title.about__content{
     text-align: center;
     max-width: 500px;
 }
-.about__title .about__content h2{
+.about__content img{
+    width: 200px;
+}
+/* h2 */
+/* .about__title .about__content h2{
     font-size: 50px;
     color: #FDFDFD;
     margin-left: 38px;
+} */
+.about__title .about__content h1{
+    font-size: 6.875rem;
+    font-family: var(--font-title);
+    color: #fff;
 }
 .about__title .about__content P{
-    font-size: 25px;
-    color: #fff;
+    font-size: 24px;
+    color: whitesmoke;
     font-weight: bold;
     margin: 15px 0;
+    font-family: var(--font-italic);
 }
-.about__content--button{
-    margin-left: 53px;
+/* .about__content--button{
+     margin-left: 53px;
+} */
+.about__content--button a{
+    color: var(--color-primary);
 }
 .btn{
     background-color: transparent;
@@ -81,7 +100,11 @@ a{
     background-color: #fff;
 }
 /*   */
-
+.about__content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 6rem ;
+}
 .content--about{
     margin: auto;
     overflow: hidden;
@@ -91,7 +114,7 @@ a{
     margin-bottom: 40px;
     margin-top: 40px;
     padding: 10px;
-    border-top:1px solid tomato ;
+    /* border-top:1px solid tomato ; */
 }
 .about__content--title h2{
     margin-left: 45%;
@@ -116,13 +139,185 @@ a{
     flex: 1;
     margin-left: 15%;
     /* overflow: hidden; */
+
 }
-
-
 .about-img img{
-    width: 100%;
+    width: 70%;
 }
-.about-img span{
+.line{
+    width: 80px;
+    height:  2px;
+    background-color: black;
+}
+/* .about-img span{
     font-size: 12px;
     margin-left: 48%;
+} */
+
+
+
+/* quy trinh */
+.ablout_procedure{
+    background-color: var(--color-bg-gray);
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.about_content_procedure{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content_procedure{
+    flex: 1;
+}
+.content_procedure a{
+    color: var(--color-primary);
+}
+.blog__btn-icon {
+    display: none;
+    margin-left: 0.25rem;
+    animation: fadeBackFromLeft 0.3s;
+}
+
+.blog__btn:hover .blog__btn-icon {
+    display: inline-block;
+}
+/* --test */
+li{
+  list-style-type: none;  
+}
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+.footer-top{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+
+}
+
+.footer-top li{
+    
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ccc;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+
+
+.footer-botom{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 43%; */
+    /* padding-left: 43%; */
+    padding-bottom: 20px;
+    border: none;
+    /* border-bottom: 1px solid; */
+}
+
+.footer-botom li img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* gmail */
+#abour{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+}
+#abour input {
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px ;
+    width: 400px;
+    text-align: center;
+    outline: none;
+    margin-bottom: 50px;
+}
+.logo-abour img{
+    width: 60px;
+}
+#abour button {
+    background-color: #fff;
+    border: none;
+    position: absolute;
+    left: 60%;
+    bottom: 33%;
+}
+/* animation */
+@keyframes fadeUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeBackFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

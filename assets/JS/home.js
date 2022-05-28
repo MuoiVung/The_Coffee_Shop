@@ -5,7 +5,6 @@ const btnRightSlider = document.querySelector('.slider__btn--right');
 const btnLeftSlider = document.querySelector('.slider__btn--left');
 const slides = document.querySelectorAll('.hero__slide');
 const hero = document.querySelector('.hero');
-console.log(hero);
 
 //////////////////////////////
 // slider

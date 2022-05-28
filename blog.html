@@ -14,12 +14,17 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./assets/CSS/base.css">
     <link rel="stylesheet" href="./assets/CSS/blog.css">
 </head>
 
 <body>
-    <!-- header -->
     <header class="header">
         <!-- brand -->
         <h2 class="brand">Congo</h2>
@@ -38,7 +43,7 @@
                     <a class="nav__link" href="./shop.html">Cửa Hàng</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="./blog.html">Blog</a>
+                    <a class="nav__link" href="./main_blog.html">Blog</a>
                 </li>
             </ul>
 
@@ -55,12 +60,105 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
-                        <i class="nav__icon ti-menu"></i>
+                    <a href="" class="nav__btn nav__btn--user">
+                        <i class="nav__icon ti-menu fa-regular fa-user"></i>
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+                <span class="modal__close">
+                    <i class="ti-close"></i>
+                </span>
+
+                <!-- modal login -->
+                <div class="modal__main modal--login modal__main--active">
+                    <h3 class="modal__header">Đăng nhập</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <button class="modal__btn modal__btn--login">Đăng nhập</button>
+                        <button class="modal__btn-link modal__lost-pass">Quên mật khẩu?</button>
+                    </form>
+                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biến đến Congo? Đăng ký</button>
+                </div>
+
+                <!-- modal register -->
+                <div class="modal__main modal--register">
+                    <h3 class="modal__header">Đăng ký</h3>
+                    <form class="modal__form" action="">
+                        <label class="modal__label" for="">
+                            Tên của bạn <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="text" placeholder="Tên của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Email <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="email" placeholder="Email của bạn" required>
+
+                        <label class="modal__label" for="">
+                            Mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập mật khẩu" required>
+
+                        <label class="modal__label" for="">
+                            Nhập lại mật khẩu <span style="color: #f1152f; margin-left: 3px;">*</span>
+                        </label>
+                        <input class="modal__input" type="password" placeholder="Nhập lại mật khẩu" required>
+                        <button class="modal__btn modal__btn--register">Đăng ký</button>
+                    </form>
+                    <button class="modal__btn-link modal__btn-link--login">Bạn đã có tài khoản? Đăng nhập</button>
+                </div>
+
+                <!-- modal account -->
+                <div class="modal__main modal--account">
+                    <div class="modal__icon">
+                        <img src="./assets/img/login-icon.png" alt="">
+                    </div>
+                    <h3 class="modal__header">Chào mừng</h3>
+                    <p class="modal__account-name">Tống Giang,</p>
+                    <ul class="modal__list">
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-user"></i>
+                                Thông tin tài khoản
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-cart-shopping"></i>
+                                Giỏ hàng
+                            </a>
+                        </li>
+
+                        <li class="modal__item">
+                            <a href="#" class="modal__link">
+                                <i class="modal__item-icon fa-solid fa-gear"></i>
+                                Cài đặt
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="modal__btn modal__btn--logout">Đăng xuất</button>
+                </div>
+
+                <p class="modal__error"></p>
+            </div>
+
+        </section>
     </header>
 
     <!-- main -->
@@ -81,12 +179,6 @@
                     cà phê đậm.</p>
             </div>
         </section>
-        <!-- navigation__blog -->
-        <div class="navigation__blog">
-            <a class="navigation__blog--icon" href="index.html">Trang chủ</a>
-            <i class="ti-arrow-right navigation__blog--icon"></i>
-            <a class="navigation__blog--icon" href="blog.html">Blog</a>
-        </div>
         <!-- content--blog -->
         <div class="blog__content">
             <div class="blog__content--left">
@@ -156,7 +248,7 @@
             </div>
             <div class="blog__content--right">
                 <!-- 1 -->
-                <div class="blog__content--right--one">
+                <!-- <div class="blog__content--right--one">
                     <div class="blog__about">
                         <a href="about.html">
                             <div class="blog__content--right--logo">
@@ -167,17 +259,28 @@
                             <p>Bí quyết tạo nên vị ngon!</p>
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <div class="blog__content--right--title-item">
                     <h3>Bài viết liên quan</h3>
                 </div>
-                <div class="blog__content--right--title-item--line">
-                    <!-- line -->
-                </div>
+                <!-- <div class="blog__content--right--title-item--line">
+                    line 
+                </div> -->
+
                 <!-- 2 -->
                 <div class="blog__content--right--two">
-                    <a href="">
-                        <img src="assets/img/blog--demo1.jpg">
+                    <a href="blog__three.html">
+                        <img src="assets/img/home-about-3.jpg">
+                        <h5>BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON</h5>
+                        <i class="ti-user blog__date--user--right"></i>
+                        <span class="blog__date--user--right">Niếp Bàn</span>
+                    </a>
+                </div>
+
+                <!-- 2 -->
+                <div class="blog__content--right--two">
+                    <a href="blog.html">
+                        <img src="assets/img/home-blog-1.jpg">
                         <h5>CÁCH ĐÁNH GIÁ VỊ NGON CỦA CÀ PHÊ NHƯ THẾ NÀO?</h5>
                         <i class="ti-user blog__date--user--right"></i>
                         <span class="blog__date--user--right">Niếp Bàn</span>
@@ -186,7 +289,7 @@
                 <!-- bài viết 2 -->
                 <div class="blog__content--right--two">
                     <a href="blog__two.html">
-                        <img src="assets/img/blog__demo2.jpg">
+                        <img src="assets/img/home-blog-2.jpg">
                         <h5>CÁCH CHỌN CÀ PHÊ NGON CHO QUÁN CỦA MÌNH</h5>
                         <i class="ti-user blog__date--user--right"></i>
                         <span class="blog__date--user--right">Niếp Bàn</span>
@@ -197,78 +300,12 @@
                 <script async defer crossorigin="anonymous"
                     src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="vKV9zshS"></script>
                 <div class="Blog__cmt">
-                    <div class="fb-comments" data-href="http://127.0.0.1:5500/blog.html" data-width=""
+                    <div class="fb-comments" data-href="https://muoivung.github.io/The_Coffee_Shop/" data-width=""
                         data-numposts="5"></div>
                 </div>
             </div>
         </div>
         <!-- sản phẩm -->
-        <div class="hotsale">
-            <section class="shop">
-                <div class="shop__container">
-                    <section class="shop__header">
-                        <h2 class="shop__title">Hot Sale</h2>
-                        <div class="shop__separator">
-                            <img src="./assets/img/home-title-separator.png" alt="">
-                        </div>
-                        <p class="shop__desc">Thoải mái lựa chọn những túi cà phê chất lượng nhất</p>
-                    </section>
-                    <section class="shop__body">
-                        <ul class="shop__list">
-                            <li class="shop__item">
-                                <a href="" class="shop__item-link">
-                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                    <div class="shop__btn">
-                                        <i class="shop__btn-icon ti-bag"></i>
-                                        <span class="shop__btn-text">Mua Ngay</span>
-                                    </div>
-                                </a>
-
-                                <div class="shop__item-name">Cà phê Espresso</div>
-                                <div class="shop__item-price">300.000 VNĐ</div>
-                            </li>
-
-                            <li class="shop__item">
-                                <a href="" class="shop__item-link">
-                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                    <div class="shop__btn">
-                                        <i class="shop__btn-icon ti-bag"></i>
-                                        <span class="shop__btn-text">Mua Ngay</span>
-                                    </div>
-                                </a>
-
-                                <div class="shop__item-name">Cà phê Espresso</div>
-                                <div class="shop__item-price">300.000 VNĐ</div>
-                            </li>
-
-                            <li class="shop__item">
-                                <a href="" class="shop__item-link">
-                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                    <div class="shop__btn">
-                                        <i class="shop__btn-icon ti-bag"></i>
-                                        <span class="shop__btn-text">Mua Ngay</span>
-                                    </div>
-                                </a>
-
-                                <div class="shop__item-name">Cà phê Espresso</div>
-                                <div class="shop__item-price">300.000 VNĐ</div>
-                            </li>
-
-                            <li class="shop__item">
-                                <a href="" class="shop__item-link">
-                                    <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                    <div class="shop__btn">
-                                        <i class="shop__btn-icon ti-bag"></i>
-                                        <span class="shop__btn-text">Mua Ngay</span>
-                                    </div>
-                                </a>
-
-                                <div class="shop__item-name">Cà phê Espresso</div>
-                                <div class="shop__item-price">300.000 VNĐ</div>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
     </main>
 
     <!-- footer -->
@@ -278,15 +315,15 @@
                 <ul class="footer__list">
                     <li class="footer__item">
                         <i class="footer__item-icon ti-mobile"></i>
-                        PHONE : <span class="footer__item-content">+06070804111</span>
+                        PHONE : <span class="footer__item-content">+083 823 8088</span>
                     </li>
                     <li class="footer__item">
                         <i class="footer__item-icon ti-location-pin"></i>
-                        ADDRESS : <span class="footer__item-content">108 Lương Sơn Bạc</span>
+                        ADDRESS : <span class="footer__item-content">26 Yên đỗ,Phường Yên Đỗ,TP.Pleiku,Gia Lai</span>
                     </li>
                     <li class="footer__item">
                         <i class="footer__item-icon ti-email"></i>
-                        EMAIL : <span class="footer__item-content">congo@gmail.com</span>
+                        EMAIL : <span class="footer__item-content">congogialaicompany@gmail.com</span>
                     </li>
                 </ul>
 
