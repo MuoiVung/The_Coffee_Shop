@@ -1,9 +1,4 @@
 
-function paginationNext(){
-    console.log("abc")
-    document.getElementById("pagination_2").style.display = "block";
-};
-
 document.getElementById("click-description").onclick = function () {
     document.getElementById("description").style.display = 'block';
     document.getElementById("click-description").style.color = "#c7a17a"
