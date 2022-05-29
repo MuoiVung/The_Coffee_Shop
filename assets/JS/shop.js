@@ -28,19 +28,6 @@ const search_input_user = document.getElementById("search-input")
 
 function search_click(e){
     e.preventDefault()
-
-    // E muốn innerText về chữ thường NHMA e LÀM NÓ LỖI
-
-
-    // for(i = 0 ; 1 < shop_item.length; i+=1){
-    //     shop_item[i].innerText.tolowerCase()
-    //     console.log(shop_item[i].innerText)
-    // }
-
-    console.log(search_input_user.value)
-    console.log(typeof(shop_item[0].innerText))
-
-
     // ấn hiện key
     shop_item.forEach(function(el){
         let text =  el.innerText.toLowerCase()
