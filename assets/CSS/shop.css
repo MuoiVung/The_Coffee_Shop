@@ -348,7 +348,10 @@ a {
     display: flex;
     width: 100%;
 }
-
+.sidebar-search-item form{
+    display: flex;
+    width: 100%;
+}
 #search-input {
     width: 80%;
     height: 40px;

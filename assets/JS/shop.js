@@ -30,9 +30,11 @@ function search_click(e){
     e.preventDefault()
     // ấn hiện key
     shop_item.forEach(function(el){
-        let text =  el.innerText.toLowerCase()
+        let text = el.innerText.toLowerCase()
         if(text.indexOf(search_input_user.value)>-1){
             el.style.display=""
+            // document.querySelectorAll(".grid_row").style.display= "flex"
+            // el.style.float="left"
         }else{
             el.style.display="none"
         }
