@@ -32,11 +32,12 @@ function search_click(e){
     shop_item.forEach(function(el){
         let text = el.innerText.toLowerCase()
         if(text.indexOf(search_input_user.value)>-1){
-            el.style.display=""
-            // document.querySelectorAll(".grid_row").style.display= "flex"
-            // el.style.float="left"
+            // el.style.display=""
+            el.classList.remove("search_shop")
         }else{
-            el.style.display="none"
+            // el.style.display="none"
+            // el.classList.remove = "search_shop"
+            el.className = "search_shop"
         }
     })
 }

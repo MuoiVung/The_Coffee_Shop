@@ -626,3 +626,7 @@ a {
 }
 
 /* space */
+
+.search_shop{
+    display: none;
+}
