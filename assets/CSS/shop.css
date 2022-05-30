@@ -348,7 +348,10 @@ a {
     display: flex;
     width: 100%;
 }
-
+.sidebar-search-item form{
+    display: flex;
+    width: 100%;
+}
 #search-input {
     width: 80%;
     height: 40px;
@@ -620,4 +623,10 @@ a {
 }
 .navigation-icon:hover{
    color: black;
+}
+
+/* space */
+
+.search_shop{
+    display: none;
 }
