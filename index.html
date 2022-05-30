@@ -53,16 +53,91 @@
 
             <!-- nav side button -->
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="" class="nav__btn">
+                <li class="nav__item nav__item--cart">
+                    <a href="" class="nav__btn nav__btn--cart">
+                        <div class="nav__btn--cart-qty hidden"></div>
                         <i class="nav__icon ti-shopping-cart"></i>
                     </a>
+
+                    <div class="nav__cart ">
+                        <p class="nav__cart-no-product hidden">No products in the cart.</p>
+
+                        <div class="nav__cart-product">
+                            <ul class="nav__cart-list">
+                                <!-- <li class="nav__cart-item">
+                                    <div class="nav__cart-img">
+                                        <img src="./assets/img/product-1.jpg" alt="">
+                                    </div>
+
+                                    <div class="nav__cart-content">
+                                        <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                        <p class="nav__cart-qty">
+                                            Số lượng: <span class="nav__cart-num">1</span>
+                                        </p>
+                                        <p class="nav__cart-price">300.000 VNĐ</p>
+                                    </div>
+
+                                    <button class="nav__cart-close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </li> -->
+                                <!-- 
+                                <li class="nav__cart-item">
+                                    <div class="nav__cart-img">
+                                        <img src="./assets/img/product-1.jpg" alt="" class="">
+                                    </div>
+
+                                    <div class="nav__cart-content">
+                                        <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                        <p class="nav__cart-qty">
+                                            Số lượng: <span class="nav__cart-num">1</span>
+                                        </p>
+                                        <p class="nav__cart-price">300.000 VNĐ</p>
+                                    </div>
+
+                                    <button class="nav__cart-close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </li>
+
+                                <li class="nav__cart-item">
+                                    <div class="nav__cart-img">
+                                        <img src="./assets/img/product-1.jpg" alt="" class="">
+                                    </div>
+
+                                    <div class="nav__cart-content">
+                                        <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                        <p class="nav__cart-qty">
+                                            Số lượng: <span class="nav__cart-num">1</span>
+                                        </p>
+                                        <p class="nav__cart-price">300.000 VNĐ</p>
+                                    </div>
+
+                                    <button class="nav__cart-close">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </li> -->
+                            </ul>
+
+                            <p class="nav__cart-total">
+                                <!-- Total:
+                                <span class="nav__cart-total-price">600.000 VNĐ</span> -->
+                            </p>
+
+                            <div class="nav__cart-btns">
+                                <!-- <a href="" class="nav__cart-btn">Giỏ Hàng</a>
+                                <a href="" class="nav__cart-btn">Thanh Toán</a> -->
+                            </div>
+                        </div>
+                    </div>
                 </li>
+
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
+                    <a href="" class="nav__btn nav__btn--search">
                         <i class="nav__icon ti-search"></i>
                     </a>
                 </li>
+
                 <li class="nav__item">
                     <a href="" class="nav__btn nav__btn--user">
                         <i class="nav__icon ti-menu fa-regular fa-user"></i>
@@ -96,7 +171,8 @@
                         <button class="modal__btn modal__btn--login">Đăng nhập</button>
                         <button class="modal__btn-link modal__lost-pass">Quên mật khẩu?</button>
                     </form>
-                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biến đến Congo? Đăng ký</button>
+                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biết đến Congo? Đăng
+                        ký</button>
                 </div>
 
                 <!-- modal register -->
@@ -164,6 +240,14 @@
 
         </section>
     </header>
+
+    <!-- searh bar -->
+    <aside class="search-bar hidden">
+        <input type="text" class="search-bar__input" placeholder="Search here...">
+        <button class="search-bar__close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </aside>
 
     <!-- main -->
     <main>
@@ -336,9 +420,72 @@
                                     <span class="shop__btn-text">Mua Ngay</span>
                                 </div>
                             </a>
-
                             <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
                             <div class="shop__item-price">300.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-2.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+                            <h3 class="shop__item-name">Cà phê sữa</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">70.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-3.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+                            <h3 class="shop__item-name">Cà phê phin</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">150.000 VNĐ</div>
+                        </li>
+
+                        <li class="shop__item">
+                            <a href="" class="shop__item-link">
+                                <img class="shop__item-img" src="./assets/img/product-4.jpg" alt="">
+                                <div class="shop__btn">
+                                    <i class="shop__btn-icon ti-bag"></i>
+                                    <span class="shop__btn-text">Mua Ngay</span>
+                                </div>
+                            </a>
+                            <h3 class="shop__item-name">Cà phê nguyên hạt</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">50.000 VNĐ</div>
                         </li>
 
                         <li class="shop__item">
@@ -349,88 +496,74 @@
                                     <span class="shop__btn-text">Mua Ngay</span>
                                 </div>
                             </a>
-
                             <h3 class="shop__item-name">Cà phê Espresso</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
                             <div class="shop__item-price">300.000 VNĐ</div>
                         </li>
 
                         <li class="shop__item">
                             <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <img class="shop__item-img" src="./assets/img/product-2.jpg" alt="">
                                 <div class="shop__btn">
                                     <i class="shop__btn-icon ti-bag"></i>
                                     <span class="shop__btn-text">Mua Ngay</span>
                                 </div>
                             </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
+                            <h3 class="shop__item-name">Cà phê sữa</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">70.000 VNĐ</div>
                         </li>
 
                         <li class="shop__item">
                             <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <img class="shop__item-img" src="./assets/img/product-3.jpg" alt="">
                                 <div class="shop__btn">
                                     <i class="shop__btn-icon ti-bag"></i>
                                     <span class="shop__btn-text">Mua Ngay</span>
                                 </div>
                             </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
+                            <h3 class="shop__item-name">Cà phê phin</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">150.000 VNĐ</div>
                         </li>
 
                         <li class="shop__item">
                             <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
+                                <img class="shop__item-img" src="./assets/img/product-4.jpg" alt="">
                                 <div class="shop__btn">
                                     <i class="shop__btn-icon ti-bag"></i>
                                     <span class="shop__btn-text">Mua Ngay</span>
                                 </div>
                             </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
+                            <h3 class="shop__item-name">Cà phê nguyên hạt</h3>
+                            <div class="shop__item-review">
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                                <i class="shop__item-start products-item-star-gold fas fa-star"></i>
+                            </div>
+                            <div class="shop__item-price">50.000 VNĐ</div>
                         </li>
 
-                        <li class="shop__item">
-                            <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                <div class="shop__btn">
-                                    <i class="shop__btn-icon ti-bag"></i>
-                                    <span class="shop__btn-text">Mua Ngay</span>
-                                </div>
-                            </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
-                        </li>
-
-                        <li class="shop__item">
-                            <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                <div class="shop__btn">
-                                    <i class="shop__btn-icon ti-bag"></i>
-                                    <span class="shop__btn-text">Mua Ngay</span>
-                                </div>
-                            </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
-                        </li>
-
-                        <li class="shop__item">
-                            <a href="" class="shop__item-link">
-                                <img class="shop__item-img" src="./assets/img/product-1.jpg" alt="">
-                                <div class="shop__btn">
-                                    <i class="shop__btn-icon ti-bag"></i>
-                                    <span class="shop__btn-text">Mua Ngay</span>
-                                </div>
-                            </a>
-
-                            <h3 class="shop__item-name">Cà phê Espresso</h3>
-                            <div class="shop__item-price">300.000 VNĐ</div>
-                        </li>
                     </ul>
                 </section>
             </div>

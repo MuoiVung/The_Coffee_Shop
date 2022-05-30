@@ -50,6 +50,7 @@
 /* hero */
 
 .hero {
+    position: relative;
     max-height: 57.5rem;
 }
 
@@ -278,6 +279,12 @@
     margin-top: 0.25rem;
     font-family: var(--font-italic);
     color: var(--color-primary);
+}
+
+.shop__item-start {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-right: 0.5rem;
 }
 
 /* ---------------------------------------*/
