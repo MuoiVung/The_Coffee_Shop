@@ -37,6 +37,32 @@ body.open-modal {
 /* ---------------------------------------*/
 /* header */
 
+.nav__bars-btn {
+    display: none;
+    outline: none;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    opacity: 0.8;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav__bars-btn:hover {
+    opacity: 1;
+}
+
+.header.sticky .nav__bars-btn {
+    opacity: 1;
+    color: #000;
+}
+
+.header.sticky .nav__bars-btn:hover {
+    color: var(--color-primary);
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -514,17 +540,18 @@ body.open-modal .header.sticky {
 }
 
 .footer__list {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .footer__item {
     color: #fff;
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .footer__item-icon {
@@ -547,13 +574,13 @@ body.open-modal .header.sticky {
     margin-bottom: 1.5rem;
     width: 10rem;
     height: auto;
-    /* filter: invert(71%) sepia(12%) saturate(1046%) hue-rotate(350deg) brightness(94%) contrast(85%); */
 }
 
 .footer__slogan {
     color: rgba(255, 255, 255, 0.8);
     font-family: var(--font-italic);
     font-size: 1rem;
+    margin-top: 2rem;
 }
 
 .footer__bottom {
@@ -618,5 +645,72 @@ body.open-modal .header.sticky {
     to {
         opacity: 0;
         transform: translateX(100%);
+    }
+}
+
+/* ---------------------------------------*/
+/* responsive */
+
+/* Tablet & Mobile */
+@media screen and (max-width: 1023px) {
+    .nav__bars-btn {
+        display: block;
+    }
+
+    .nav__list.nav__list--page {
+        display: none;
+    }
+
+    .brand {
+        text-align: center;
+    }
+
+    .nav__item:first-child {
+        margin-left: 0;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1023px) and (min-width: 740px) {}
+
+/* Mobile */
+@media screen and (max-width: 739px) {
+
+    .nav__item {
+        display: none;
+    }
+
+    .nav__item--user {
+        display: block;
+        margin-left: 0;
+    }
+
+    .footer__container {
+        width: 90%;
+    }
+
+    .footer__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__item-icon {
+        margin-bottom: 1rem;
+    }
+
+    .footer__item-content {
+        margin-top: 0.5rem;
+    }
+
+    .footer__container-bottom {
+        flex-direction: column;
+    }
+
+    .footer__social {
+        margin-top: 1rem;
+    }
+
+    .footer__social:first-child {
+        margin-left: 0;
     }
 }
