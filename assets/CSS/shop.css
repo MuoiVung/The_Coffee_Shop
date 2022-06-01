@@ -52,6 +52,7 @@ a {
 
 /* products-filter */
 .products-filter {
+    display: block;
     padding: 15px 22px;
     margin-bottom: 20px;
     border-radius: 2px;
@@ -327,6 +328,7 @@ a {
 }
 .sidebar-products-tags{
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     padding-left: 20px;
     color: var(--color-text);
@@ -387,7 +389,7 @@ a {
 
 .sparator-shopCart {
     border: solid 0.5px #718093;
-    opacity: 0.5;
+    opacity: 0.1;
     margin: 40px 0;
 
 }
@@ -487,64 +489,45 @@ a {
     color: var(--color-primary);
 }
 
+/*woocommerce-tabs*/
+.woocommerce-tabs{
+   padding: 0 100px;
+}
 .tabs {
-    display: block;
+    display: flex;
+    justify-content: center;
     list-style: none;
     text-align: center;
 }
 
 .lists-tab {
-    display: inline-block;
-    float: none;
-    padding: 0 20px;
+    width: 20%;
+    padding: 20px 20px;
     margin-bottom: 40px;
-}
-
-.description-tab {
     color: black;
     cursor: pointer;
-    border-bottom: solid 1px black;
+    border-bottom: solid 2px #999;
 }
-
+.description-tab{
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
 .description-tab:hover {
     color: var(--color-primary);
-    border-bottom: solid 1px var(--color-primary);
-}
-
-/* .description-tab:first-child{
-    border-right: 1px solid black;
-    border-bottom: solid 1px black;
-    border-color: #555;
-} */
-.trademark-tab {
-    color: black;
-    cursor: pointer;
-    border-bottom: solid 1px black;
+    border-bottom: solid 2px var(--color-primary);
 }
 
 .trademark-tab:hover {
     color: var(--color-primary);
-    border-bottom: solid 1px var(--color-primary);
+    border-bottom: solid 2px var(--color-primary);
 }
-
-/* .trademark-tab:first-child{
-    border-right: 1px solid black;
-    border-color: #555;
-} */
-.reviews-tab {
-    cursor: pointer;
-    color: black;
-    border-bottom: solid 1px black;
-}
-
 .reviews-tab:hover {
     color: var(--color-primary);
-    border-bottom: solid 1px var(--color-primary);
+    border-bottom: solid 2px var(--color-primary);
 }
 
 .trademark-content-tab {
     display: none;
-    ;
 }
 
 .reviews-title {
@@ -597,7 +580,8 @@ a {
     display: flex;
     background-color: #eae7de;
     justify-content: space-between;
-    padding: 40px 20px;
+    font-size: 1.4rem;
+    padding: 40px 40px;
     margin-top: 40px;
 }
 
@@ -620,4 +604,10 @@ a {
 }
 .navigation-icon:hover{
    color: black;
+}
+
+/*function */
+
+#block_caphehat{
+    display: none;
 }

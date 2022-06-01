@@ -172,7 +172,7 @@
             <div class="grid">
                 <div class="grid_row">
                     <div class="grid_column-9">
-                        <div class="products-filter">
+                        <div  class="products-filter">
                             <span class="products-filter__lable">Sắp xếp theo</span>
                             <buton class="products-filter__btn btn">Phổ biến</buton>
                             <buton class="products-filter__btn btn btn--primary">Mới nhất</buton>
@@ -194,20 +194,22 @@
 
                             <div class="products-filter__page">
                                 <span class="products-filter__page-num">
-                                    <span class="products-filter__page-parent">1</span>/6
+                                    <span id="count" class="products-filter__page-parent">1</span>
+                                    <span>/ 6</span>
                                 </span>
                                 <div class="products-filter__page-contro">
+
                                     <a href="" class="products-filter__page-btn home-filter__page-btn--disable">
                                         <i class="products-filter__page-icon fas fa-angle-left"></i>
                                     </a>
-                                    <a href="" class="products-filter__page-btn">
+                                    <p onclick="gotoPage2()" class="products-filter__page-btn">
                                         <i class="products-filter__page-icon fas fa-angle-right"></i>
-                                    </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid_row">
-                            <div class="grid_column-10-3">
+                        <div id="deleteBlock" class="grid_row">
+                            <div id="coffee1" class="grid_column-10-3 ">
                                 <div class="products-item">
                                     <a class="products-item-link" href="shop_cart.html">
                                         <div class="products-img">
@@ -222,7 +224,6 @@
                                         <h4>
                                             <a class="products-item-link products-title" href="">Cà phê bột LavAzza Gran
                                                 Aroma Ground Coffee Blend,rang nhẹ-340g</a>
-
                                         </h4>
                                         <div class="product-itemrating">
                                             <i class="products-item-star-gold fas fa-star"></i>
@@ -451,9 +452,10 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <!--pagination_2-->
+                       
+                        <!--page_2-->
+
                         <div id="pagination_2" class="grid_row ">
                             <div class="grid_column-10-3">
                                 <div class="products-item">
@@ -565,7 +567,7 @@
                             </div>
                         </div>
                         <!--pagination-->
-                        <ul class="pagination products__pagination">
+                        <ul id="pagination" class="pagination products__pagination">
                             <li class="pagination-item">
                                 <a href="" class="pagination__link">
                                     <i class="pagination-item__icon fas fa-angle-left"></i>
@@ -574,7 +576,7 @@
                             <li class="pagination-item pagination-item-active">
                                 <a href="" class="pagination-item__link ">1</a>
                             </li>
-                            <li class="pagination-item">
+                            <li  class="pagination-item">
                                 <a href="" class="pagination-item__link">2</a>
                             </li>
                             <li class="pagination-item">
@@ -594,8 +596,95 @@
                             </li>
                             
                         </ul>
+                         <!--ca phe hat-->
+                    
+                         <div id="block_caphehat" class="grid_row">
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/pixlr-bg-result.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">Cà phê nhân xanh
+                                                Ethiopia Sidamo Guji Bensa-1kg</a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">390.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/caphehatdarang.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">CÀ PHÊ BLAGU HẠT ĐÃ
+                                                RANG , ETHIOPIA W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">250.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid_column-10-3">
+                                <div class="products-item">
+                                    <a class="products-item-link" href="">
+                                        <div class="products-img">
+                                            <img src="./assets/img/caphehatdarang.png" alt="">
+                                        </div>
+                                        <div class="products-addCart">
+                                            <i class="products-addCart-icon ti-bag"></i>
+                                            <span class="products-addCart-text">Mua Ngay</span>
+                                        </div>
+                                    </a>
+                                    <div class="products-item-sub">
+                                        <h4>
+                                            <a class="products-item-link products-title" href="">CÀ PHÊ BLAGU HẠT ĐÃ
+                                                RANG , ETHIOPIA W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G </a>
+                                        </h4>
+                                        <div class="product-itemrating">
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                            <i class="products-item-star-gold fas fa-star"></i>
+                                        </div>
+                                        <span class="products-price">250.000 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
                     </div>
-
+                     <!--product_sidebar-->
                     <div class="grid_column-3">
                         <div class="sidebar">
                             <div class="sidebar-title">
@@ -606,7 +695,7 @@
                             </div>
                             <div class="sidebar-search-item">
                                 <input id="search-input" type="text" placeholder="Nhập thông tin">
-                                <button class="search-btn">
+                                <button onclick="searchProducts()" class="search-btn">
                                     <i class="search-btn-icon fas fa-search"></i>
                                 </button>
                             </div>
@@ -730,16 +819,18 @@
                                     <h4>Danh mục sản phẩm</h4>
                                 </div>
                                 <div class="sparator"></div>
-                                <div class="sidebar-products-tags">
-                                    <a class="sidebar-products-tags-list" href="">Cà phê hạt</a>
-                                    <a class="sidebar-products-tags-list" href="">Cà phê bột</a>
-                                    <a class="sidebar-products-tags-list" href="">Dụng cụ pha chế cà phê</a>
-
-                                    <a class="sidebar-products-tags-list" href="">Máy ngành cà phê</a>
+                                <div class="">
+                                    <ul class="sidebar-products-tags">
+                                        <li id="caphehat" class="sidebar-products-tags-list">Cà phê hạt</li>
+                                        <li class="sidebar-products-tags-list">Cà phê bột</li>
+                                        <li class="sidebar-products-tags-list">Dụng cụ pha chế cà phê</li>
+                                        <li class="sidebar-products-tags-list">Máy ngành cà phê</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+                     <!--product_sidebar-->
                 </div>
             </div>
             </div>
