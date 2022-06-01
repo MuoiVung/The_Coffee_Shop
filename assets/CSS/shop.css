@@ -568,7 +568,10 @@ a {
     padding-top: 20px;
     display: inline-block;
 }
-
+.review-respond-tabs{
+    display: flex;
+    flex-direction: column;
+}
 .review-respond-star {
     padding-left: 20px;
 }
@@ -587,9 +590,17 @@ a {
     padding: 40px 40px;
     margin-top: 40px;
 }
-
+.review-respond-name{
+    padding: 5px;
+    margin-right: 10px;
+}
+.review-respond-email{
+    padding: 5px;
+}
 .review-respond-btn {
+    width: fit-content;
     padding: 10px 20px;
+    margin-top: 25px;
     cursor: pointer;
     color: white;
     border: none;
@@ -608,14 +619,9 @@ a {
 .navigation-icon:hover{
    color: black;
 }
-
-<<<<<<< HEAD
-/*function */
-
 #block_caphehat{
     display: none;
 }
-=======
 /* space */
 
 .search_shop{
@@ -624,4 +630,3 @@ a {
 
 
 
->>>>>>> cd4e2f0a6b197303f34041b754a0de9f0d608bde

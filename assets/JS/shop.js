@@ -25,31 +25,6 @@ caphehat.onclick = function (){
     document.getElementById("block_caphehat").style.display = "flex"
 }
 
-
-<<<<<<< HEAD
-=======
-// document.getElementById("click-description").onclick = function () {
-//     document.getElementById("description").style.display = 'block';
-//     document.getElementById("click-description").style.color = "#c7a17a"
-//     document.getElementById("trademark").style.display = 'none';
-//     document.getElementById("review").style.display = 'none';
-// };
-// document.getElementById("click-trademark").onclick = function () {
-//     document.getElementById("trademark").style.display = 'block';
-//     document.getElementById("description").style.display = 'none';
-//     document.getElementById("review").style.display = 'none';
-// };
-// document.getElementById("click-review").onclick = function () {
-//     document.getElementById("review").style.display = 'block';
-//     document.getElementById("description").style.display = 'none';
-//     document.getElementById("trademark").style.display = 'none';
-// };
-
-
-
-
-
-
 // hover search
 const shop_item = Array.from(document.querySelectorAll(".products-item"));
 const search_input_user = document.getElementById("search-input");
@@ -72,4 +47,3 @@ function search_click(e) {
 }
 
 document.getElementById("search-click-shop").addEventListener("submit", search_click);
->>>>>>> cd4e2f0a6b197303f34041b754a0de9f0d608bde
