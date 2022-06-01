@@ -7,6 +7,9 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const header = $('.header');
+const searchBar = $('.search-bar');
+const btnCloseSearch = $('.search-bar__close');
+const btnSearch = $('.nav__btn--search');
 const btnUser = $('.nav__btn--user');
 const modal = $('.modal');
 const modalClose = $('.modal__close');
@@ -21,6 +24,16 @@ const modalLogin = $('.modal--login');
 const modalRegister = $('.modal--register');
 const modalError = $('.modal__error');
 const modalInputs = $$('.modal__input');
+
+const navCart = $('.nav__cart');
+const navCartProduct = $('.nav__cart-product');
+const navCartNoProduct = $('.nav__cart-no-product');
+const navCartList = $('.nav__cart-list');
+const navCartTotal = $('.nav__cart-total');
+const navCartBtns = $('.nav__cart-btns');
+const shopList = $('.shop__list');
+const cartQTY = $('.nav__btn--cart-qty');
+
 
 let foundAccount;
 
@@ -37,6 +50,57 @@ class Account {
         this.name = name;
     }
 }
+
+const account1 = {
+    cart: [
+        {
+            name: 'Cà phê England',
+            qty: 2,
+            price: 150000,
+            imgUrl: './assets/img/product-1.jpg',
+        },
+        {
+            name: 'Cà phê London',
+            qty: 1,
+            price: 200000,
+            imgUrl: './assets/img/product-2.jpg',
+        },
+    ],
+
+    isLogging: false,
+
+    email: '123@gmail.com',
+    password: '123',
+    name: 'Holland',
+
+};
+
+
+const account2 = {
+    cart: [
+        {
+            name: 'Cà phê America',
+            qty: 2,
+            price: 3500000,
+            imgUrl: './assets/img/product-1.jpg',
+        },
+        {
+            name: 'Cà phê London',
+            qty: 3,
+            price: 200000,
+            imgUrl: './assets/img/product-2.jpg',
+        },
+    ],
+
+    isLogging: false,
+
+    email: '456@gmail.com',
+    password: '456',
+    name: 'Joker',
+
+};
+
+// accounts = [account1, account2];
 
 //////////////////////////
 // Local Storage
@@ -59,11 +123,32 @@ document.documentElement.style.setProperty('--scrollbar-width', (window.innerWid
 window.addEventListener('scroll', function () {
     if (window.scrollY !== 0) {
         header.classList.add('sticky');
+        searchBar.classList.add('sticky');
     }
     else {
         header.classList.remove('sticky');
+        searchBar.classList.remove('sticky');
     }
 });
+
+//////////////////////////
+// Chức năng search bar ở ô tìm kiếm
+
+// Hiển thị search bar khi ấn nút tìm kiếm trên header
+btnSearch.addEventListener('click', (e) => {
+    e.preventDefault();
+    header.classList.add('hidden');
+    searchBar.classList.remove('hidden');
+});
+
+// Tắt search bar khi ấn nút close
+btnCloseSearch.addEventListener('click', (e) => {
+    e.preventDefault();
+    header.classList.remove('hidden');
+    searchBar.classList.add('hidden');
+});
+
+
 
 //////////////////////////
 // Hiển thị modal đăng nhập khi ấn nút user
@@ -101,6 +186,111 @@ btnUser.addEventListener('click', (e) => {
 modalClose.addEventListener('click', closeModal);
 
 modalOverlay.addEventListener('click', closeModal);
+
+// Giỏ hàng
+// Hiển thị giao diện tương ứng có hàng hay không có hàng
+const renderCartProduct = function () {
+    let html = '';
+    let totalPrice = 0;
+
+    if (!foundAccount) return;
+
+    foundAccount.cart.forEach(item => {
+        html += `
+        
+           <li class="nav__cart-item">
+                <div class="nav__cart-img">
+                    <img src="${item.imgUrl}" alt="">
+                </div>
+    
+                <div class="nav__cart-content">
+                    <h4 class="nav__cart-name">${item.name}</h4>
+                    <p class="nav__cart-qty">
+                        Số lượng: <span class="nav__cart-num">${item.qty}</span>
+                    </p>
+                    <p class="nav__cart-price">${item.price} VNĐ</p>
+                </div>
+    
+                <button class="nav__cart-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>                      
+            </li>    
+      
+        `;
+        totalPrice += item.price * item.qty;
+    });
+
+    navCartList.innerHTML = html;
+
+    html = `    
+            Total:
+            <span class="nav__cart-total-price">${totalPrice} VNĐ</span>                                          
+    `;
+
+    navCartTotal.innerHTML = html;
+
+    html = `
+            <a href="" class="nav__cart-btn">Giỏ Hàng</a>
+            <a href="" class="nav__cart-btn">Thanh Toán</a>                       
+    `;
+
+    navCartBtns.innerHTML = html;
+    cartQTY.innerHTML = foundAccount.cart.length;
+};
+
+const renderCart = function () {
+    if (!foundAccount || foundAccount.cart.length === 0) {
+        navCartNoProduct.classList.remove('hidden');
+        navCartProduct.classList.add('hidden');
+        cartQTY.classList.add('hidden');
+        return;
+    }
+    else {
+        navCartNoProduct.classList.add('hidden');
+        navCartProduct.classList.remove('hidden');
+        cartQTY.classList.remove('hidden');
+    }
+    renderCartProduct();
+};
+
+const addProduct = function (btn) {
+    const product = btn.closest('.shop__item');
+    const imgUrl = product.querySelector('.shop__item-img').getAttribute('src');
+    const name = product.querySelector('.shop__item-name').innerHTML;
+    const price = product.querySelector('.shop__item-price')
+        .innerHTML.slice(0, -4).replace(/\./g, '');
+
+    let dupProduct = false;
+    // kiểm tra sản phẩm này đã có trong giỏ hàng chưa?
+    foundAccount.cart.forEach(item => {
+        if (item.name === name) {
+            item.qty++;
+            dupProduct = true;
+        }
+    });
+
+    if (dupProduct) return;
+
+    const newProduct = { name, qty: 1, price, imgUrl, };
+    foundAccount.cart.push(newProduct);
+};
+
+// Loại bỏ hàng ra khỏi giỏ hàng
+const removeProduct = function (removedItem) {
+    const removedItemName = removedItem
+        .querySelector('.nav__cart-name')
+        .innerHTML.trim();
+
+    for (let i = 0; i < foundAccount.cart.length; i++) {
+        if (foundAccount.cart[i].name === removedItemName) {
+            foundAccount.cart.splice(i, 1);
+        }
+    }
+
+    setLocalStorage();
+    renderCart();
+};
+
 
 //////////////////////////
 // chức năng login, logout, register
@@ -163,13 +353,15 @@ const loginHandler = function (modalBtn) {
     });
 
     if (!foundAccount) {
-        showModalError('Tài khoản không tồn tại!');
+        showModalError('Vui lòng kiểm tra lại email và mật khẩu!');
         return;
     }
 
     renderModalMain(modalAccount);
 
     renderAccount(foundAccount);
+
+    renderCart();
 
     // xóa dữ liệu ở input sau khi đăng nhập thành công
     resetModal();
@@ -183,6 +375,7 @@ const logoutHandler = function () {
     renderModalMain(modalLogin);
     foundAccount.isLogging = false;
     foundAccount = undefined;
+    renderCart();
     setLocalStorage();
 };
 
@@ -223,6 +416,7 @@ const registerHandler = function () {
     }
 
     const newAccount = new Account(email, modalPasswords[0].value, name.trim());
+    foundAccount = newAccount;
     accounts.push(newAccount);
 
     //Lưu tài khoản mới
@@ -231,6 +425,7 @@ const registerHandler = function () {
 
     resetModal();
     renderModalMain(modalAccount);
+    renderCart();
 
 };
 
@@ -245,10 +440,12 @@ modalContent.addEventListener('click', function (e) {
     // khi ấn nút đăng ký trong modal login và ngược lại
     if (modalBtn.classList.contains('modal__btn-link--register')) {
         renderModalMain(modalRegister);
+        resetModal();
     }
 
     if (modalBtn.classList.contains('modal__btn-link--login')) {
         renderModalMain(modalLogin);
+        resetModal();
     }
 
     // Thực hiện đăng nhập
@@ -280,10 +477,36 @@ const setCurrentAccount = function () {
     renderModalMain(modalLogin);
 };
 
+
+shopList?.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!foundAccount) return;
+    if (!e.target.classList.contains('shop__btn')
+        && !e.target.closest('.shop__btn')
+    ) return;
+    addProduct(e.target);
+    renderCart();
+    setLocalStorage();
+});
+
+
+// Ấn nút x => loại bỏ hàng ra khỏi giỏ hàng
+navCart.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (!e.target.classList.contains('nav__cart-close')
+        && !e.target.closest('.nav__cart-close')) return;
+
+    const removedItem = e.target.closest('.nav__cart-item');
+    removeProduct(removedItem);
+});
+
+
 const init = function () {
     resetModal();
     getLocalStorage();
     setCurrentAccount();
+    renderCart();
 };
+
 
 init();

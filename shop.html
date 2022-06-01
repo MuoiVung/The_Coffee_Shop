@@ -28,13 +28,18 @@
 <body>
     <!-- header -->
     <header class="header">
+        <!-- nav tablet/mobile button -->
+        <button class="nav__bars-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <!-- brand -->
         <h2 class="brand">Congo</h2>
 
         <!-- nav -->
         <nav class="nav">
             <!-- nav menu -->
-            <ul class="nav__list">
+            <ul class="nav__list nav__list--page">
                 <li class="nav__item">
                     <a class="nav__link" href="./index.html">Trang Chủ</a>
                 </li>
@@ -51,17 +56,92 @@
 
             <!-- nav side button -->
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="" class="nav__btn">
+                <li class="nav__item nav__item--cart">
+                    <a href="" class="nav__btn nav__btn--cart">
+                        <div class="nav__btn--cart-qty hidden"></div>
                         <i class="nav__icon ti-shopping-cart"></i>
                     </a>
+
+                    <div class="nav__cart ">
+                        <p class="nav__cart-no-product hidden">No products in the cart.</p>
+
+                        <div class="nav__cart-product">
+                            <ul class="nav__cart-list">
+                                <!-- <li class="nav__cart-item">
+                                <div class="nav__cart-img">
+                                    <img src="./assets/img/product-1.jpg" alt="">
+                                </div>
+
+                                <div class="nav__cart-content">
+                                    <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                    <p class="nav__cart-qty">
+                                        Số lượng: <span class="nav__cart-num">1</span>
+                                    </p>
+                                    <p class="nav__cart-price">300.000 VNĐ</p>
+                                </div>
+
+                                <button class="nav__cart-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </li> -->
+                                <!-- 
+                            <li class="nav__cart-item">
+                                <div class="nav__cart-img">
+                                    <img src="./assets/img/product-1.jpg" alt="" class="">
+                                </div>
+
+                                <div class="nav__cart-content">
+                                    <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                    <p class="nav__cart-qty">
+                                        Số lượng: <span class="nav__cart-num">1</span>
+                                    </p>
+                                    <p class="nav__cart-price">300.000 VNĐ</p>
+                                </div>
+
+                                <button class="nav__cart-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </li>
+
+                            <li class="nav__cart-item">
+                                <div class="nav__cart-img">
+                                    <img src="./assets/img/product-1.jpg" alt="" class="">
+                                </div>
+
+                                <div class="nav__cart-content">
+                                    <h4 class="nav__cart-name">Cà phê Espresso</h4>
+                                    <p class="nav__cart-qty">
+                                        Số lượng: <span class="nav__cart-num">1</span>
+                                    </p>
+                                    <p class="nav__cart-price">300.000 VNĐ</p>
+                                </div>
+
+                                <button class="nav__cart-close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </li> -->
+                            </ul>
+
+                            <p class="nav__cart-total">
+                                <!-- Total:
+                            <span class="nav__cart-total-price">600.000 VNĐ</span> -->
+                            </p>
+
+                            <div class="nav__cart-btns">
+                                <!-- <a href="" class="nav__cart-btn">Giỏ Hàng</a>
+                            <a href="" class="nav__cart-btn">Thanh Toán</a> -->
+                            </div>
+                        </div>
+                    </div>
                 </li>
+
                 <li class="nav__item">
-                    <a href="" class="nav__btn">
+                    <a href="" class="nav__btn nav__btn--search">
                         <i class="nav__icon ti-search"></i>
                     </a>
                 </li>
-                <li class="nav__item">
+
+                <li class="nav__item nav__item--user">
                     <a href="" class="nav__btn nav__btn--user">
                         <i class="nav__icon ti-menu fa-regular fa-user"></i>
                     </a>
@@ -94,7 +174,8 @@
                         <button class="modal__btn modal__btn--login">Đăng nhập</button>
                         <button class="modal__btn-link modal__lost-pass">Quên mật khẩu?</button>
                     </form>
-                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biến đến Congo? Đăng ký</button>
+                    <button class="modal__btn-link modal__btn-link--register">Bạn mới biết đến Congo? Đăng
+                        ký</button>
                 </div>
 
                 <!-- modal register -->
@@ -163,6 +244,14 @@
         </section>
     </header>
 
+    <!-- searh bar -->
+    <aside class="search-bar hidden">
+        <input type="text" class="search-bar__input" placeholder="Search here...">
+        <button class="search-bar__close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </aside>
+
     <!-- main -->
     <main>
         <section class="hero">
@@ -176,7 +265,7 @@
                             <span class="products-filter__lable">Sắp xếp theo</span>
                             <buton class="products-filter__btn btn">Phổ biến</buton>
                             <buton class="products-filter__btn btn btn--primary">Mới nhất</buton>
-                            <buton  class="products-filter__btn btn">Bán chạy</buton>
+                            <buton class="products-filter__btn btn">Bán chạy</buton>
 
                             <div class="select-input">
                                 <span class="select-input__lable">Giá</span>
@@ -588,13 +677,13 @@
                             <li class="pagination-item">
                                 <a href="" class="pagination-item__link">6</a>
                             </li>
-                            
+
                             <li class="pagination-item">
                                 <a href="" class="pagination__link">
                                     <i class="pagination-item__icon fas fa-angle-right"></i>
                                 </a>
                             </li>
-                            
+
                         </ul>
                          <!--ca phe hat-->
                     
@@ -693,11 +782,21 @@
                             <div class="sparator">
 
                             </div>
+                            <!-- nút space -->
                             <div class="sidebar-search-item">
+<<<<<<< HEAD
                                 <input id="search-input" type="text" placeholder="Nhập thông tin">
                                 <button onclick="searchProducts()" class="search-btn">
                                     <i class="search-btn-icon fas fa-search"></i>
                                 </button>
+=======
+                                <form id="search-click-shop" action="">
+                                    <input id="search-input" type="text" placeholder="Nhập thông tin">
+                                    <button class="search-btn">
+                                        <i class="search-btn-icon fas fa-search"></i>
+                                    </button>
+                                </form>
+>>>>>>> cd4e2f0a6b197303f34041b754a0de9f0d608bde
                             </div>
 
                             <div class="sidebar-title">
@@ -717,7 +816,8 @@
                                         </div>
                                         <div class="">
                                             <a href="">
-                                                <span class="products-title">Cà phê nhân xanh Ethiopia Sidamo Guji Bensa-1kg</span>
+                                                <span class="products-title">Cà phê nhân xanh Ethiopia Sidamo Guji
+                                                    Bensa-1kg</span>
                                             </a>
                                             <span class="products-price">390.000VND</span>
                                         </div>
@@ -725,14 +825,14 @@
                                     <li class="products-list-wiget-item">
                                         <div class="products-list-wiget-img">
                                             <a href="">
-                                                <img 
-                                                    src="./assets/img/caphehatdarang.png" alt=""
-                                                    width="100" height="100">
+                                                <img src="./assets/img/caphehatdarang.png" alt="" width="100"
+                                                    height="100">
                                             </a>
                                         </div>
                                         <div class="">
                                             <a href="">
-                                                <span class="products-title">CÀ PHÊ BLAGU HẠT ĐÃ RANG , ETHIOPIA W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G</span>
+                                                <span class="products-title">CÀ PHÊ BLAGU HẠT ĐÃ RANG , ETHIOPIA
+                                                    W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G</span>
                                             </a>
                                             <span class="products-price">250.000VND</span>
                                         </div>
@@ -751,14 +851,13 @@
                                     <li class="products-list-wiget-item">
                                         <div class="products-list-wiget-img">
                                             <a href="">
-                                                <img
-                                                    src="./assets/img/coixaycaphe.png" alt=""
-                                                    width="100" height="100">
+                                                <img src="./assets/img/coixaycaphe.png" alt="" width="100" height="100">
                                             </a>
                                         </div>
                                         <div class="">
                                             <a href="">
-                                                <span class="products-title">Cối Xay Cà Phê Bằng Tay KINGrinder K0 – Beginner Pour-Over</span>
+                                                <span class="products-title">Cối Xay Cà Phê Bằng Tay KINGrinder K0 –
+                                                    Beginner Pour-Over</span>
                                             </a>
                                             <div class="product-itemrating">
                                                 <i class="products-item-star-gold fas fa-star"></i>
@@ -773,14 +872,14 @@
                                     <li class="products-list-wiget-item">
                                         <div class="products-list-wiget-img">
                                             <a href="">
-                                                <img
-                                                    src="./assets/img/pixlr-bg-result.png" alt=""
-                                                    width="100" height="100">
+                                                <img src="./assets/img/pixlr-bg-result.png" alt="" width="100"
+                                                    height="100">
                                             </a>
                                         </div>
                                         <div class="">
                                             <a href="">
-                                                <span class="products-title">Cà phê nhân xanh Ethiopia Sidamo Guji Bensa-1kg</span>
+                                                <span class="products-title">Cà phê nhân xanh Ethiopia Sidamo Guji
+                                                    Bensa-1kg</span>
                                             </a>
                                             <div class="product-itemrating">
                                                 <i class="products-item-star-gold fas fa-star"></i>
@@ -795,14 +894,14 @@
                                     <li class="products-list-wiget-item">
                                         <div class="products-list-wiget-img">
                                             <a href="">
-                                                <img
-                                                    src="./assets/img/caphehatdarang.png" alt=""
-                                                    width="100" height="100">
+                                                <img src="./assets/img/caphehatdarang.png" alt="" width="100"
+                                                    height="100">
                                             </a>
                                         </div>
                                         <div class="">
                                             <a href="">
-                                                <span class="products-title">CÀ PHÊ BLAGU HẠT ĐÃ RANG , ETHIOPIA W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G</span>
+                                                <span class="products-title">CÀ PHÊ BLAGU HẠT ĐÃ RANG , ETHIOPIA
+                                                    W.YIRGACHEFFE, LIGHT MEDIUM ROAST 250G</span>
                                             </a>
                                             <div class="product-itemrating">
                                                 <i class="products-item-star-gold fas fa-star"></i>

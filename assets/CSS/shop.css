@@ -350,7 +350,10 @@ a {
     display: flex;
     width: 100%;
 }
-
+.sidebar-search-item form{
+    display: flex;
+    width: 100%;
+}
 #search-input {
     width: 80%;
     height: 40px;
@@ -606,8 +609,19 @@ a {
    color: black;
 }
 
+<<<<<<< HEAD
 /*function */
 
 #block_caphehat{
     display: none;
 }
+=======
+/* space */
+
+.search_shop{
+    display: none;
+}
+
+
+
+>>>>>>> cd4e2f0a6b197303f34041b754a0de9f0d608bde
