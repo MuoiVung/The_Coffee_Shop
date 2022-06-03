@@ -479,11 +479,11 @@ const setCurrentAccount = function () {
 
 
 shopList?.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (!foundAccount) return;
     if (!e.target.classList.contains('shop__btn')
         && !e.target.closest('.shop__btn')
     ) return;
+    e.preventDefault();
+    if (!foundAccount) return;
     addProduct(e.target);
     renderCart();
     setLocalStorage();

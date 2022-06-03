@@ -91,15 +91,16 @@ body.open-modal .header.sticky {
     padding: 0.5rem calc(2rem + var(--scrollbar-width)) 0.5rem 2rem;
 }
 
-.brand {
+.brand__link {
     flex: 1;
     font-size: 2rem;
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-.header.sticky .brand {
+.header.sticky .brand__link {
     color: var(--color-title);
 }
 
@@ -661,7 +662,7 @@ body.open-modal .header.sticky {
         display: none;
     }
 
-    .brand {
+    .brand__link {
         text-align: center;
     }
 
